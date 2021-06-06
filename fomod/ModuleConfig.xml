@@ -18,11 +18,14 @@
 							<conditionFlags>
 								<flag name="ha-full">Off</flag>
 								<flag name="ha-lite">Off</flag>
+								<flag name="aa">Off</flag>
+								<flag name="da">Off</flag>
 								<flag name="waccf">Off</flag>
 								<flag name="ccor">Off</flag>
 								<flag name="ha-balance">Off</flag>
 								<flag name="aa-balance">Off</flag>
-								<flag name="enchanted">Off</flag>
+								<flag name="ha-enchanted">Off</flag>
+								<flag name="aa-enchanted">Off</flag>
 							</conditionFlags>						
 							<typeDescriptor>
 								<dependencyType>
@@ -41,7 +44,7 @@
 				<group name="Choose" type="SelectAtMostOne">
 					<plugins order="Explicit">				
 
-						<plugin name="Heavy Armory - Full">
+						<plugin name="Heavy Armory - Lite">
 							<description>
 								<![CDATA[The lite verion of Heavy Armory with a few tweaks:
 								
@@ -78,6 +81,61 @@
 							<typeDescriptor>
 								<dependencyType>
 									<defaultType name="Optional"/>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+
+		<!-- Other weapon mods -->
+		<installStep name="Mods">
+			<optionalFileGroups order="Explicit">
+				<group name="Choose" type="SelectAny">
+					<plugins order="Explicit">				
+
+						<plugin name="Animated Armoury - DAR version">
+							<description>
+								<![CDATA[Choose this if you use Animated Armoury - DAR version.]]>
+							</description>
+							<conditionFlags>
+								<flag name="aa">On</flag>
+							</conditionFlags>							
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="NewArmoury.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="Dawnguard Arsenal">
+							<description>
+								<![CDATA[Choose this if you use Dawwnguard Arsenal.]]>
+							</description>
+							<conditionFlags>
+								<flag name="da">On</flag>
+							</conditionFlags>							
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="DawnguardArsenal.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
 								</dependencyType>
 							</typeDescriptor>
 						</plugin>
@@ -141,19 +199,20 @@
 			</optionalFileGroups>
 		</installStep>
 
-		<!-- Balance tweaks HA-->
-		<installStep name="Heavy Armory - Balance">
+		<!-- Balance tweaks -->
+		<installStep name="Balance">
 			<visible>
 				<dependencies operator="And">
 					<flagDependency flag="waccf" value="off"/>
 				</dependencies>
 			</visible>
 			<optionalFileGroups order="Explicit">
-				<group name="Choose" type="SelectAtMostOne">
+				<group name="Choose" type="SelectAtAny">
 					<plugins order="Explicit">
+
 						<plugin name="Heavy Armory Balance tweaks">
 							<description>
-								<![CDATA[This will install balancing tweaks to Heavy Armory.]]>
+								<![CDATA[This will install balancing tweaks for Heavy Armory.]]>
 							</description>
 							<conditionFlags>
 								<flag name="ha-balance">On</flag>
@@ -173,24 +232,10 @@
 								</dependencyType>
 							</typeDescriptor>
 						</plugin>
-					</plugins>
-				</group>
-			</optionalFileGroups>
-		</installStep>
 
-				<!-- Balance tweaks AA-->
-		<installStep name="Animated Armoury - Balance">
-			<visible>
-				<dependencies operator="And">
-					<flagDependency flag="waccf" value="off"/>
-				</dependencies>
-			</visible>
-			<optionalFileGroups order="Explicit">
-				<group name="Choose" type="SelectAtMostOne">
-					<plugins order="Explicit">
 						<plugin name="Animated Armoury Balance tweaks">
 							<description>
-								<![CDATA[This will install balancing tweaks to Animated Armoury.]]>
+								<![CDATA[This will install balancing tweaks for Animated Armoury.]]>
 							</description>
 							<conditionFlags>
 								<flag name="aa-balance">On</flag>
@@ -209,10 +254,173 @@
 								</dependencyType>
 							</typeDescriptor>
 						</plugin>
+
 					</plugins>
 				</group>
 			</optionalFileGroups>
 		</installStep>
+
+		<!-- Enchanted versions -->
+		<installStep name="Enchanted addons">
+			<optionalFileGroups order="Explicit">
+				<group name="Choose" type="SelectAtAny">
+					<plugins order="Explicit">
+
+						<plugin name="Heavy Armory Enchanted Addon">
+							<description>
+								<![CDATA[This will install Enchanted versions of Heavy Armory's weapons. They will include changes from the balance tweaks or from WACCF/CCOR, depending on your choice from previous steps.]]>
+							</description>
+							<conditionFlags>
+								<flag name="ha-enchanted">On</flag>
+							</conditionFlags>							
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="Or">
+												<flagDependency flag="ha-full" value="On"/>
+												<flagDependency flag="ha-lite" value="On"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="Animated Armoury Enchanted Addon">
+							<description>
+								<![CDATA[This will install Enchanted versions of Animated Armoury's weapons. They will include changes from the balance tweaks or from WACCF/CCOR, depending on your choice from previous steps.]]>
+							</description>
+							<conditionFlags>
+								<flag name="aa-enchanted">On</flag>
+							</conditionFlags>							
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="Or">
+												<fileDependency file="NewArmoury.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+
+		<!-- Patches -->
+		<installStep name="Patches">
+			<optionalFileGroups order="Explicit">
+				<group name="Choose the mods to install patches for" type="SelectAny">
+					<plugins order="Explicit">
+
+						<plugin name="Ars Metallica">
+							<description>
+								<![CDATA[This will install Ars Metallica patches for Animated Armoury, Heavy Armory and Dawnguard Arsenal, depending on previous choices. This includes breakdown recipes.]]>
+							</description>
+							<conditionFlags>
+								<flag name="am">On</flag>
+							</conditionFlags>						
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="Ars Metallica.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Dawnguard Arsenal">
+							<conditionFlags>
+								<flag name="da">On</flag>
+							</conditionFlags>						
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="DawnguardArsenal.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="High-Level Loot Rarified - Animated Armoury addon">
+							<conditionFlags>
+								<flag name="aa">On</flag>
+							</conditionFlags>						
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="NewArmoury.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="High-Level Loot Rarified - Heavy Armoury addon">
+							<conditionFlags>
+								<flag name="ha">On</flag>
+							</conditionFlags>					
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="PrvtI_HeavyArmory.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+	</installSteps>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
