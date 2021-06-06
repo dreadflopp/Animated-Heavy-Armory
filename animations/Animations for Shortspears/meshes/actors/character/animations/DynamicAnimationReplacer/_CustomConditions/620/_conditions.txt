@@ -1,0 +1,1 @@
+IsEquippedRightHasKeyword("PrvtI_HeavyArmory.esp" | 0x1bb975)

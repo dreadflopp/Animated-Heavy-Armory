@@ -1,0 +1,492 @@
+﻿<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/dreadflopp/fomod-schema/blob/master/ModuleConfig.xsd">
+	<moduleName>Animated Heavy Armory - DAR version</moduleName>
+	<installSteps order="Explicit">
+
+		<!-- Welcome -->
+		<installStep name="Welcome">
+			<optionalFileGroups order="Explicit">
+				<group name="Choose" type="SelectExactlyOne">
+					<plugins order="Explicit">
+						<plugin name="Welcome">
+							<description>
+								<![CDATA[This installer will guide you through the installation of:
+								
+								* Heavy Armory - a tweaked full version or a tweaked lite version (both optional)
+								* Animations for Heavy Armory (each animation is optional)
+								* Patches for Heavy Armory and Animated Armoury (optional)§]]>
+							</description>
+							<conditionFlags>
+								<flag name="ha-full">Off</flag>
+								<flag name="ha-lite">Off</flag>
+								<flag name="waccf">Off</flag>
+								<flag name="ccor">Off</flag>
+								<flag name="ha-balance">Off</flag>
+								<flag name="aa-balance">Off</flag>
+								<flag name="enchanted">Off</flag>
+							</conditionFlags>						
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Recommended"/>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+		
+		<!-- Heavy Armory version -->
+		<installStep name="Heavy Armory">
+			<optionalFileGroups order="Explicit">
+				<group name="Choose" type="SelectAtMostOne">
+					<plugins order="Explicit">				
+
+						<plugin name="Heavy Armory - Full">
+							<description>
+								<![CDATA[The lite verion of Heavy Armory with a few tweaks:
+								
+								- Halebards have been renamed to Poleaxes since they are shorter than Halebards
+								- Keywords added to allow custom animations to be added and to allow SkyUI Weapons pack to show its custom icons for the added weapons.
+								- Changes from Unofficial Skyrim Special Edition added as well as a few other small fixes.
+								- Quarterstaffs and Tridents has been removed since they have no fitting animation. They are too short for the animation from Animated Armoury to work well.
+								
+								]]>
+							</description>
+							<conditionFlags>
+								<flag name="ha-lite">On</flag>
+							</conditionFlags>							
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Recommended"/>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="Heavy Armory - Full">
+							<description>
+								<![CDATA[The full verion of Heavy Armory with a few tweaks:
+								
+								- Halebards have been renamed to Poleaxes since they are shorter than Halebards
+								- Keywords added to allow custom animations to be added and to allow SkyUI Weapons pack to show its custom icons for the added weapons.
+								- Changes from Unofficial Skyrim Special Edition added as well as a few other small fixes.
+								
+								]]>
+							</description>
+							<conditionFlags>
+								<flag name="ha-full">On</flag>
+							</conditionFlags>							
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+
+		<!-- WACCF and CCOR -->
+		<installStep name="WACCF and CCOR">
+			<optionalFileGroups order="Explicit">
+				<group name="Choose" type="SelectAtMostOne">
+					<plugins order="Explicit">
+						<plugin name="Weapons Armor Clothing and Clutter Fixes">
+							<description>
+								<![CDATA[This will install patches for Weapons Armor Clothing Clutter Fixes(WACCF). Please note that neither High-Level Loot Rarified or the balance patches are compatible with WACCF and the install step for them will be skiped.]]>
+							</description>
+							<conditionFlags>
+								<flag name="waccf">On</flag>
+							</conditionFlags>							
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<flagDependency flag="Weapons Armor Clothing &amp; Clutter Fixes.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="Weapons Armor Clothing and Clutter Fixes + Complete Crafting Overhaul Remastered">
+							<description>
+								<![CDATA[This will install patches for Weapons Armor Clothing Clutter Fixes(WACCF) and Complete Crafting Overhaul Remastered(CCOR). Please note that neither High-Level Loot Rarified or the balance patches are compatible with WACCF or CCOR and the install step for them will be skiped.]]>
+							</description>
+							<conditionFlags>
+								<flag name="waccf">On</flag>
+								<flag name="ccor">On</flag>
+							</conditionFlags>							
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="Complete Crafting Overhaul_Remastered.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+
+		<!-- Balance tweaks HA-->
+		<installStep name="Heavy Armory - Balance">
+			<visible>
+				<dependencies operator="And">
+					<flagDependency flag="waccf" value="off"/>
+				</dependencies>
+			</visible>
+			<optionalFileGroups order="Explicit">
+				<group name="Choose" type="SelectAtMostOne">
+					<plugins order="Explicit">
+						<plugin name="Heavy Armory Balance tweaks">
+							<description>
+								<![CDATA[This will install balancing tweaks to Heavy Armory.]]>
+							</description>
+							<conditionFlags>
+								<flag name="ha-balance">On</flag>
+							</conditionFlags>							
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="Or">
+												<flagDependency flag="ha-full" value="On"/>
+												<flagDependency flag="ha-lite" value="On"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+
+				<!-- Balance tweaks AA-->
+		<installStep name="Animated Armoury - Balance">
+			<visible>
+				<dependencies operator="And">
+					<flagDependency flag="waccf" value="off"/>
+				</dependencies>
+			</visible>
+			<optionalFileGroups order="Explicit">
+				<group name="Choose" type="SelectAtMostOne">
+					<plugins order="Explicit">
+						<plugin name="Animated Armoury Balance tweaks">
+							<description>
+								<![CDATA[This will install balancing tweaks to Animated Armoury.]]>
+							</description>
+							<conditionFlags>
+								<flag name="aa-balance">On</flag>
+							</conditionFlags>							
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="Or">
+												<fileDependency file="NewArmoury.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+
+
+
+
+
+
+
+
+
+
+		<!--Addons -->
+		<installStep name="High-Level Loot Rarified Addons">
+			<optionalFileGroups order="Explicit">
+				<group name="Choose" type="SelectAny">
+					<plugins order="Explicit">
+						<plugin name="High-Level Loot Rarified - Animated Armoury addon">
+							<description>
+								<![CDATA[This addon rarifies Animated Armoury.]]>
+							</description>
+							<files>
+								<file source="addons\High-level Loot Rarified - Animated Armoury Addon.esp" destination="High-level Loot Rarified - Animated Armoury Addon.esp" priority="0" />
+							</files>							
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="NewArmoury.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="High-Level Loot Rarified - Heavy Armoury addon">
+							<description>
+								<![CDATA[This addon rarifies Heavy Armory.]]>
+							</description>
+							<files>
+								<file source="addons\High-level Loot Rarified - Heavy Armory Addon.esp" destination="High-level Loot Rarified - Heavy Armory Addon.esp" priority="0" />
+							</files>							
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="PrvtI_HeavyArmory.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="High-Level Loot Rarified - OBIS addon">
+							<description>
+								<![CDATA[This addon rarifies OBIS.]]>
+							</description>
+							<files>
+								<file source="addons\High-level Loot Rarified - OBIS Addon.esp" destination="aHigh-level Loot Rarified - OBIS Addon.esp" priority="0" />
+							</files>							
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="OBIS SE.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+
+		<!-- Tweaks -->
+		<installStep name="High-Level Loot Rarified Tweaks">
+			<optionalFileGroups order="Explicit">
+				<group name="Choose" type="SelectAny">
+					<plugins order="Explicit">
+						<plugin name="Tweaks">
+							<description>
+								<![CDATA[This is a consistency tweak for Animated Armoury and Heavy Armory. It is created using a scipt by Wheredidit run: https://www.nexusmods.com/skyrimspecialedition/mods/19547
+* Rebalances Animated Armoury and Heavy Armoury against both each other as well as against vanilla Skyrim. 
+* The Halbards from Heavy Armory, which are shorter than Halbards from Animated Armory, will be renamed to Pole Axes (which is a real thing). 
+* The new animations from Animated Armoury will be applied to the new weapons from Heavy Armory]]>								
+							</description>
+							<conditionFlags>
+								<flag name="tweaks">On</flag>
+							</conditionFlags>
+							<files>
+								<file source="tweaks\Animated Armory - Heavy Armory tweaks.esp" destination="Animated Armory - Heavy Armory tweaks.esp" priority="0" />
+							</files>							
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Recommended"/>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+
+		<!-- Patches -->
+		<installStep name="High-Level Loot Rarified Patches">
+			<optionalFileGroups order="Explicit">
+				<group name="Choose the mods to install patches for" type="SelectAny">
+					<plugins order="Explicit">
+						<plugin name="Ars Metallica">
+							<conditionFlags>
+								<flag name="am">On</flag>
+							</conditionFlags>						
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="Ars Metallica.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Dawnguard Arsenal">
+							<conditionFlags>
+								<flag name="da">On</flag>
+							</conditionFlags>						
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="DawnguardArsenal.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="High-Level Loot Rarified - Animated Armoury addon">
+							<conditionFlags>
+								<flag name="aa">On</flag>
+							</conditionFlags>						
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="NewArmoury.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="High-Level Loot Rarified - Heavy Armoury addon">
+							<conditionFlags>
+								<flag name="ha">On</flag>
+							</conditionFlags>					
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="PrvtI_HeavyArmory.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+	</installSteps>
+	
+	<!-- ****************************** -->
+	<!-- ****** Install patterns ****** -->
+	<!-- ****************************** -->
+	<conditionalFileInstalls>
+		<patterns>
+			<!-- Main + Addons -->
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+				</dependencies>
+				<files>
+					<file source="patches/HLLR - Animated Armoury and Heavy Armoury Patch.esp" destination="HLLR - Animated Armoury and Heavy Armoury Patch.esp" priority="0" />
+				</files>
+			</pattern>	
+
+			<!-- Ars Metallica -->
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="Off"/>
+					<flagDependency flag="am" value="On"/>
+				</dependencies>
+				<files>
+					<file source="patches/HLLR - Animated Armory - Ars Metallica Patch.esp" destination="HLLR - Animated Armory - Ars Metallica Patch.esp" priority="0" />
+				</files>
+			</pattern>	
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="am" value="On"/>
+				</dependencies>
+				<files>
+					<file source="patches/HLLR - Heavy Armory - Ars Metallica Patch.esp" destination="HLLR - Heavy Armory - Ars Metallica Patch.esp" priority="0" />
+				</files>
+			</pattern>	
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="am" value="On"/>
+				</dependencies>
+				<files>
+					<file source="patches/HLLR - Animated Armory and Heavy Armory - Ars Metallica Patch.esp" destination="HLLR - Animated Armory and Heavy Armory - Ars Metallica Patch.esp" priority="0" />
+				</files>
+			</pattern>	
+
+			<!-- Dawnguard Arsenal -->
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="Off"/>
+					<flagDependency flag="da" value="On"/>
+				</dependencies>
+				<files>
+					<file source="patches/HLLR - Animated Armoury and Dawnguard Arsenal Patch.esp" destination="HLLR - Animated Armoury and Dawnguard Arsenal Patch.esp" priority="0" />
+				</files>
+			</pattern>	
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="da" value="On"/>
+				</dependencies>
+				<files>
+					<file source="patches/HLLR - Heavy Armoury and Dawnguard Arsenal Patch.esp" destination="HLLR - Heavy Armoury and Dawnguard Arsenal Patch.esp" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="da" value="On"/>
+				</dependencies>
+				<files>
+					<file source="patches/HLLR - Animated Armoury Heavy Armory and Dawnguard Arsenal Patch.esp" destination="HLLR - Animated Armoury Heavy Armory and Dawnguard Arsenal Patch.esp" priority="0" />
+				</files>
+			</pattern>
+		</patterns>
+	</conditionalFileInstalls>
+</config>
