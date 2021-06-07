@@ -26,6 +26,8 @@
 								<flag name="aa-balance">Off</flag>
 								<flag name="ha-enchanted">Off</flag>
 								<flag name="aa-enchanted">Off</flag>
+								<flag name="iddp">Off</flag>
+								<flag name="ussep">Off</flag>
 							</conditionFlags>						
 							<typeDescriptor>
 								<dependencyType>
@@ -246,7 +248,7 @@
 									<patterns>
 										<pattern>
 											<dependencies operator="Or">
-												<fileDependency file="NewArmoury.esp" state="Active"/>
+												<flagDependency flag="aa" value="On"/>
 											</dependencies>
 											<type name="Recommended"/>
 										</pattern>
@@ -261,6 +263,7 @@
 		</installStep>
 
 		<!-- Enchanted versions -->
+		<!--
 		<installStep name="Enchanted addons">
 			<optionalFileGroups order="Explicit">
 				<group name="Choose" type="SelectAtAny">
@@ -315,16 +318,17 @@
 				</group>
 			</optionalFileGroups>
 		</installStep>
+		-->
 
-		<!-- Patches -->
-		<installStep name="Patches">
+		<!-- Other mods -->
+		<installStep name="Other mods">
 			<optionalFileGroups order="Explicit">
-				<group name="Choose the mods to install patches for" type="SelectAny">
+				<group name="Choose the mods you use" type="SelectAny">
 					<plugins order="Explicit">
 
 						<plugin name="Ars Metallica">
 							<description>
-								<![CDATA[This will install Ars Metallica patches for Animated Armoury, Heavy Armory and Dawnguard Arsenal, depending on previous choices. This includes breakdown recipes.]]>
+								<![CDATA[This will install Ars Metallica patches for Animated Armoury, Heavy Armory and Dawnguard Arsenal, depending on previous selections. This includes breakdown recipes for Animated Armoury and Heavy Armory. Dawnguard Arsenal users should use the Ars Metallica patch from Dawnguard Arsenals necus page to complement this patch and to get Breakdown Recipes.]]>
 							</description>
 							<conditionFlags>
 								<flag name="am">On</flag>
@@ -343,9 +347,10 @@
 								</dependencyType>
 							</typeDescriptor>
 						</plugin>
-						<plugin name="Dawnguard Arsenal">
+						
+						<plugin name="Immersive Dawnguard Dayspring Pass SE">
 							<conditionFlags>
-								<flag name="da">On</flag>
+								<flag name="iddp">On</flag>
 							</conditionFlags>						
 							<typeDescriptor>
 								<dependencyType>
@@ -353,7 +358,7 @@
 									<patterns>
 										<pattern>
 											<dependencies operator="And">
-												<fileDependency file="DawnguardArsenal.esp" state="Active"/>
+												<fileDependency file="AHZBetterDGEntranceSE.esp" state="Active"/>
 											</dependencies>
 											<type name="Recommended"/>
 										</pattern>
@@ -361,9 +366,10 @@
 								</dependencyType>
 							</typeDescriptor>
 						</plugin>
-						<plugin name="High-Level Loot Rarified - Animated Armoury addon">
+
+						<plugin name="Unofficial Skyrim Special Edition Patch">
 							<conditionFlags>
-								<flag name="aa">On</flag>
+								<flag name="ussep">On</flag>
 							</conditionFlags>						
 							<typeDescriptor>
 								<dependencyType>
@@ -371,7 +377,7 @@
 									<patterns>
 										<pattern>
 											<dependencies operator="And">
-												<fileDependency file="NewArmoury.esp" state="Active"/>
+												<fileDependency file="Unofficial Skyrim Special Edition Patch.esp" state="Active"/>
 											</dependencies>
 											<type name="Recommended"/>
 										</pattern>
@@ -379,237 +385,7 @@
 								</dependencyType>
 							</typeDescriptor>
 						</plugin>
-						<plugin name="High-Level Loot Rarified - Heavy Armoury addon">
-							<conditionFlags>
-								<flag name="ha">On</flag>
-							</conditionFlags>					
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="PrvtI_HeavyArmory.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-					</plugins>
-				</group>
-			</optionalFileGroups>
-		</installStep>
-	</installSteps>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		<!--Addons -->
-		<installStep name="High-Level Loot Rarified Addons">
-			<optionalFileGroups order="Explicit">
-				<group name="Choose" type="SelectAny">
-					<plugins order="Explicit">
-						<plugin name="High-Level Loot Rarified - Animated Armoury addon">
-							<description>
-								<![CDATA[This addon rarifies Animated Armoury.]]>
-							</description>
-							<files>
-								<file source="addons\High-level Loot Rarified - Animated Armoury Addon.esp" destination="High-level Loot Rarified - Animated Armoury Addon.esp" priority="0" />
-							</files>							
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="NewArmoury.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-						<plugin name="High-Level Loot Rarified - Heavy Armoury addon">
-							<description>
-								<![CDATA[This addon rarifies Heavy Armory.]]>
-							</description>
-							<files>
-								<file source="addons\High-level Loot Rarified - Heavy Armory Addon.esp" destination="High-level Loot Rarified - Heavy Armory Addon.esp" priority="0" />
-							</files>							
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="PrvtI_HeavyArmory.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-						<plugin name="High-Level Loot Rarified - OBIS addon">
-							<description>
-								<![CDATA[This addon rarifies OBIS.]]>
-							</description>
-							<files>
-								<file source="addons\High-level Loot Rarified - OBIS Addon.esp" destination="aHigh-level Loot Rarified - OBIS Addon.esp" priority="0" />
-							</files>							
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="OBIS SE.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-					</plugins>
-				</group>
-			</optionalFileGroups>
-		</installStep>
-
-		<!-- Tweaks -->
-		<installStep name="High-Level Loot Rarified Tweaks">
-			<optionalFileGroups order="Explicit">
-				<group name="Choose" type="SelectAny">
-					<plugins order="Explicit">
-						<plugin name="Tweaks">
-							<description>
-								<![CDATA[This is a consistency tweak for Animated Armoury and Heavy Armory. It is created using a scipt by Wheredidit run: https://www.nexusmods.com/skyrimspecialedition/mods/19547
-* Rebalances Animated Armoury and Heavy Armoury against both each other as well as against vanilla Skyrim. 
-* The Halbards from Heavy Armory, which are shorter than Halbards from Animated Armory, will be renamed to Pole Axes (which is a real thing). 
-* The new animations from Animated Armoury will be applied to the new weapons from Heavy Armory]]>								
-							</description>
-							<conditionFlags>
-								<flag name="tweaks">On</flag>
-							</conditionFlags>
-							<files>
-								<file source="tweaks\Animated Armory - Heavy Armory tweaks.esp" destination="Animated Armory - Heavy Armory tweaks.esp" priority="0" />
-							</files>							
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-					</plugins>
-				</group>
-			</optionalFileGroups>
-		</installStep>
-
-		<!-- Patches -->
-		<installStep name="High-Level Loot Rarified Patches">
-			<optionalFileGroups order="Explicit">
-				<group name="Choose the mods to install patches for" type="SelectAny">
-					<plugins order="Explicit">
-						<plugin name="Ars Metallica">
-							<conditionFlags>
-								<flag name="am">On</flag>
-							</conditionFlags>						
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="Ars Metallica.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-						<plugin name="Dawnguard Arsenal">
-							<conditionFlags>
-								<flag name="da">On</flag>
-							</conditionFlags>						
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="DawnguardArsenal.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-						<plugin name="High-Level Loot Rarified - Animated Armoury addon">
-							<conditionFlags>
-								<flag name="aa">On</flag>
-							</conditionFlags>						
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="NewArmoury.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-						<plugin name="High-Level Loot Rarified - Heavy Armoury addon">
-							<conditionFlags>
-								<flag name="ha">On</flag>
-							</conditionFlags>					
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="PrvtI_HeavyArmory.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
 					</plugins>
 				</group>
 			</optionalFileGroups>
@@ -621,6 +397,155 @@
 	<!-- ****************************** -->
 	<conditionalFileInstalls>
 		<patterns>
+
+			<!-- Heavy Armory Version -->
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ha-full" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+				</dependencies>
+				<files>
+					<file source="heavy armory/heavy armory - full/PrvtI_HeavyArmory.esp" destination="PrvtI_HeavyArmory.esp" priority="0" />
+					<file source="heavy armory/meshes/PrvtI_HeavyArmory.bsa" destination="PrvtI_HeavyArmory.bsa" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ha-full" value="Off"/>
+					<flagDependency flag="ha-lite" value="On"/>
+				</dependencies>
+				<files>
+					<file source="heavy armory/heavy armory - lite/PrvtI_HeavyArmory.esp" destination="PrvtI_HeavyArmory.esp" priority="0" />
+					<file source="heavy armory/meshes/PrvtI_HeavyArmory.bsa" destination="PrvtI_HeavyArmory.bsa" priority="0" />
+				</files>
+			</pattern>
+
+			<!-- waccf - ccor -->
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ha-full" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="Off"/>
+				</dependencies>
+				<files>
+					<file source="patches/waccf-ccor/ha-full/HeavyArmory-WACCF_patch.esp" destination="HeavyArmory-WACCF_patch.esp" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ha-full" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="On"/>
+				</dependencies>
+				<files>
+					<file source="patches/waccf-ccor/ha-full/HeavyArmory-WACCF-CCOR_patch.esp" destination="HeavyArmory-WACCF-CCOR_patch.esp" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ha-full" value="Off"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="Off"/>
+				</dependencies>
+				<files>
+					<file source="patches/waccf-ccor/ha-lite/HeavyArmory-WACCF_patch.esp" destination="HeavyArmory-WACCF_patch.esp" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ha-full" value="Off"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="On"/>
+				</dependencies>
+				<files>
+					<file source="patches/waccf-ccor/ha-lite/HeavyArmory-WACCF-CCOR_patch.esp" destination="HeavyArmory-WACCF-CCOR_patch.esp" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="Off"/>
+				</dependencies>
+				<files>
+					<file source="patches/waccf-ccor/AnimatedArmoury-WACCF_patch.esp" destination="AnimatedArmoury-WACCF_patch.esp" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="On"/>
+				</dependencies>
+				<files>
+					<file source="patches/waccf-ccor/AnimatedArmory-WACCF-CCOR_patch.esp" destination="AnimatedArmory-WACCF-CCOR_patch.esp" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ha-full" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="Off"/>
+				</dependencies>
+				<files>
+					<file source="patches/waccf-ccor/ha-full/HeavyArmory-AnimatedArmoury-WACCF_lvlist-patch.esp" destination="HeavyArmory-AnimatedArmoury-WACCF_lvlist-patch.esp" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ha-full" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="Off"/>
+				</dependencies>
+				<files>
+					<file source="patches/waccf-ccor/ha-full/HeavyArmory-AnimatedArmoury-WACCF-CCOR_lvlist-patch.esp" destination="HeavyArmory-AnimatedArmoury-WACCF-CCOR_lvlist-patch.esp" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ha-full" value="Off"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="Off"/>
+				</dependencies>
+				<files>
+					<file source="patches/waccf-ccor/ha-lite/HeavyArmory-AnimatedArmoury-WACCF_lvlist-patch.esp" destination="HeavyArmory-AnimatedArmoury-WACCF_lvlist-patch.esp" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ha-full" value="Off"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="Off"/>
+				</dependencies>
+				<files>
+					<file source="patches/waccf-ccor/ha-lite/HeavyArmory-AnimatedArmoury-WACCF-CCOR_lvlist-patch.esp" destination="HeavyArmory-AnimatedArmoury-WACCF-CCOR_lvlist-patch.esp" priority="0" />
+				</files>
+			</pattern>
+
+			<!-- Balance tweaks -->
+
+			<!-- Other patches -->
+
+
+
+
+
+
+
+
+
 			<!-- Main + Addons -->
 			<pattern>
 				<dependencies operator="And">
