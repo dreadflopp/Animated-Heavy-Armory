@@ -857,16 +857,6 @@ The full verion of Heavy Armory with a few tweaks:
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="lvl-aa" value="On"/>
-					<flagDependency flag="lvl-ha" value="Off"/>
-					<flagDependency flag="lvl-mysticism" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="113 AA Lvl list Fixes" destination="" priority="0" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
 					<flagDependency flag="lvl-waccf" value="On"/>
 					<flagDependency flag="ha-lite" value="On"/>
 				</dependencies>
