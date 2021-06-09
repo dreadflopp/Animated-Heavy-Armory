@@ -113,6 +113,64 @@ The full verion of Heavy Armory with a few tweaks:
 			</optionalFileGroups>
 		</installStep>
 
+		<!-- Animations -->
+		<installStep name="Animations">
+		<visible>
+				<dependencies operator="And">
+					<flagDependency flag="ha" value="On"/>
+				</dependencies>
+			</visible>
+			<optionalFileGroups order="Explicit">
+				<group name="Select the animations you want to install" type="SelectAny">
+					<plugins order="Explicit">
+
+						<plugin name="Animations for Quarterstaffs">
+							<files>
+								<folder source="010 Animations for Quarterstaffs" destination=""  />
+							</files>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<flagDependency flag="ha" value="On"/>
+												<flagDependency flag="ha-lite" value="Off"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="Animations for Shortspears">
+							<files>
+								<folder source="011 Animations for Shortspears" destination=""  />
+							</files>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Recommended"/>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="Animations for Spears and Tridents">
+							<files>
+								<folder source="012 Animations for Spears and Tridents" destination=""  />
+							</files>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Recommended"/>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+
 		<!-- Balance tweaks -->
 		<installStep name="Balance Tweaks Installation">
 			<optionalFileGroups order="Explicit">
@@ -274,9 +332,9 @@ The full verion of Heavy Armory with a few tweaks:
 
 					</plugins>
 				</group>
-
 			</optionalFileGroups>
 		</installStep>
+
 		<!-- WACCF + CCOR -->
 		<installStep name="Mod selection">
 			<visible>
