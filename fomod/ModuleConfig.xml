@@ -20,6 +20,8 @@ This installer will guide you through the installation of:
 							<conditionFlags>
 								<flag name="ha-lite">Off</flag>
 								<flag name="ha">Off</flag>
+								<flag name="aa">Off</flag>
+								<flag name="da">Off</flag>
 								<flag name="balance">Off</flag>
 								<flag name="ha-waccf">Off</flag>
 								<flag name="ha-ccor">Off</flag>
@@ -116,6 +118,145 @@ The full verion of Heavy Armory with a few tweaks:
 				</group>
 			</optionalFileGroups>
 		</installStep>
+
+		<!-- Balance tweaks -->
+		<installStep name="Balance Tweaks Installation">
+			<optionalFileGroups order="Explicit">
+				<group name="Balance Tweaks" type="SelectExactlyOne">
+					<plugins order="Explicit">
+
+						<plugin name="Install balance tweaks">
+							<description>This will install balancing tweaks for Heavy Armory and/or Animated Armoury. Note that these balancing tweaks are not compatible with Weapons Armors Clothing Clutter Fixes. Selecting this will hide WACCF options in the installer.</description>
+							<conditionFlags>
+								<flag name="balance">On</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Recommended"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="Weapons Armor Clothing &amp; Clutter Fixes.esp" state="Active"/>
+											</dependencies>
+											<type name="Optional"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="Do not install balance tweaks">
+							<conditionFlags>
+								<flag name="balance">Off</flag>
+							</conditionFlags>
+							<files>
+								<folder source="020 Balance tweaks for Animated Armoury" destination="" />
+							</files>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="Weapons Armor Clothing &amp; Clutter Fixes.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+
+		<!-- Mod selection -->
+		<installStep name="Mod selection">
+			<optionalFileGroups order="Explicit">
+				<group name="Select all mod you use" type="SelectAny">
+					<plugins order="Explicit">
+
+						<plugin name="Animated Armoury">
+							<files>
+								<folder source="052 AA - ImmersiveDayspringPass patch" destination="" />
+							</files>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="NewArmoury.esp" state="Active"/>
+												<fileDependency file="AHZBetterDGEntranceSE.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="Immersive Dayspring Pass patch">
+							<description>
+							</description>
+							<files>
+								<folder source="054 AA - USSEP patch" destination="" />
+							</files>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="NewArmoury.esp" state="Active"/>
+												<fileDependency file="Unofficial Skyrim Special Edition Patch.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="Unoffical Skyrim Special Edition patch">
+							<description>
+							</description>
+							<files>
+								<folder source="054 AA - USSEP patch" destination="" />
+							</files>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="NewArmoury.esp" state="Active"/>
+												<fileDependency file="Unofficial Skyrim Special Edition Patch.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+					</plugins>
+				</group>
+
+			</optionalFileGroups>
+		</installStep>
+
+
+
+
+
+
+
+
+
+
 
 		<!-- Balance tweaks -->
 		<installStep name="Balance Tweaks Installation">
@@ -672,6 +813,25 @@ The full verion of Heavy Armory with a few tweaks:
 	<!-- ****************************** -->
 	<conditionalFileInstalls>
 		<patterns>
+			<!-- Balance -->
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="balance" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="021 Balance tweaks for Heavy Armory" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="balance" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="020 Balance tweaks for Animated Armoury" destination="" />
+				</files>
+			</pattern>
 
 			<!-- waccf ccor patches -->
 			<pattern>
