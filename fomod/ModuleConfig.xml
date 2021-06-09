@@ -22,19 +22,13 @@ This installer will guide you through the installation of:
 								<flag name="ha">Off</flag>
 								<flag name="aa">Off</flag>
 								<flag name="da">Off</flag>
+								<flag name="idp">Off</flag>
+								<flag name="ussep">Off</flag>
 								<flag name="balance">Off</flag>
-								<flag name="ha-waccf">Off</flag>
-								<flag name="ha-ccor">Off</flag>
-								<flag name="aa-waccf">Off</flag>
-								<flag name="aa-ccor">Off</flag>
-								<flag name="aa-am">Off</flag>
-								<flag name="ha-am">Off</flag>
-								<flag name="lvl-aa">Off</flag>
-								<flag name="lvl-ha">Off</flag>
-								<flag name="lvl-da">Off</flag>
-								<flag name="lvl-mysticism">Off</flag>
-								<flag name="lvl-waccf">Off</flag>
-								<flag name="lvl-ccor">Off</flag>
+								<flag name="waccf">Off</flag>
+								<flag name="ccor">Off</flag>
+								<flag name="am">Off</flag>
+								<flag name="lvl">Off</flag>
 
 							</conditionFlags>
 							<typeDescriptor>
@@ -179,473 +173,8 @@ The full verion of Heavy Armory with a few tweaks:
 					<plugins order="Explicit">
 
 						<plugin name="Animated Armoury">
-							<files>
-								<folder source="052 AA - ImmersiveDayspringPass patch" destination="" />
-							</files>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="NewArmoury.esp" state="Active"/>
-												<fileDependency file="AHZBetterDGEntranceSE.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-						<plugin name="Immersive Dayspring Pass patch">
-							<description>
-							</description>
-							<files>
-								<folder source="054 AA - USSEP patch" destination="" />
-							</files>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="NewArmoury.esp" state="Active"/>
-												<fileDependency file="Unofficial Skyrim Special Edition Patch.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-						<plugin name="Unoffical Skyrim Special Edition patch">
-							<description>
-							</description>
-							<files>
-								<folder source="054 AA - USSEP patch" destination="" />
-							</files>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="NewArmoury.esp" state="Active"/>
-												<fileDependency file="Unofficial Skyrim Special Edition Patch.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-					</plugins>
-				</group>
-
-			</optionalFileGroups>
-		</installStep>
-
-
-
-
-
-
-
-
-
-
-
-		<!-- Balance tweaks -->
-		<installStep name="Balance Tweaks Installation">
-			<optionalFileGroups order="Explicit">
-				<group name="Balance Tweaks" type="SelectAny">
-					<plugins order="Explicit">
-
-						<plugin name="Heavy Armory Balance tweaks">
-							<description>This will install balancing tweaks for Heavy Armory. Note that these balancing tweaks are not compatible with Weapons Armors Clothing Clutter Fixes. Selecting this will hide WACCF options in the installer.</description>
 							<conditionFlags>
-								<flag name="balance">On</flag>
-							</conditionFlags>
-							<files>
-								<folder source="021 Balance tweaks for Heavy Armory" destination="" />
-							</files>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="Or">
-												<flagDependency flag="ha" value="Off"/>
-												<fileDependency file="Complete Crafting Overhaul_Remastered.esp" state="Active"/>
-												<fileDependency file="Weapons Armor Clothing &amp; Clutter Fixes.esp" state="Active"/>
-											</dependencies>
-											<type name="Optional"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-						<plugin name="Animated Armoury Balance tweaks">
-							<description>This will install balancing tweaks for Animated Armoury - DAR version. Note that these balancing tweaks are not compatible with Weapons Armors Clothing Clutter Fixes. Selecting this will hide WACCF options in the installer.</description>
-							<conditionFlags>
-								<flag name="balance">On</flag>
-							</conditionFlags>
-							<files>
-								<folder source="020 Balance tweaks for Animated Armoury" destination="" />
-							</files>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="Or">
-												<fileDependency file="NewArmoury.esp" state="Inactive"/>
-												<fileDependency file="NewArmoury.esp" state="Missing"/>
-												<fileDependency file="Complete Crafting Overhaul_Remastered.esp" state="Active"/>
-												<fileDependency file="Weapons Armor Clothing &amp; Clutter Fixes.esp" state="Active"/>
-											</dependencies>
-											<type name="Optional"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-					</plugins>
-				</group>
-			</optionalFileGroups>
-		</installStep>
-
-		<!-- WACCF + CCOR -->
-		<installStep name="WACCF and CCOR">
-			<visible>
-				<dependencies operator="And">
-					<flagDependency flag="balance" value="Off"/>
-				</dependencies>
-			</visible>
-			<optionalFileGroups order="Explicit">
-				<group name="Animated Armoury" type="SelectExactlyOne">
-					<plugins order="Explicit">
-
-						<plugin name="Animated Armoury - WACCF+CCOR patch">
-							<description>Patch for Weapons Armor Clothing and Clutter Fixes and Complete Crafting Overhaul Remastered (CCOR). Note that CCOR is not compatible with Ars Metallica. Selecting this will hide Ars Metallica options in the installer.</description>
-							<conditionFlags>
-								<flag name="aa-ccor">On</flag>
-							</conditionFlags>
-							<files>
-								<folder source="031 AA-WACCF-CCOR" destination="" />
-							</files>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="NewArmoury.esp" state="Active"/>
-												<fileDependency file="Complete Crafting Overhaul_Remastered.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-						<plugin name="Animated Armoury - WACCF patch">
-							<description>Patch for Weapons Armor Clothing and Clutter Fixes, without Complete Crafting Overhaul Remastered.</description>
-							<conditionFlags>
-								<flag name="aa-waccf">On</flag>
-							</conditionFlags>
-							<files>
-								<folder source="030 AA-WACCF" destination="" />
-							</files>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="Weapons Armor Clothing &amp; Clutter Fixes.esp" state="Active"/>
-												<fileDependency file="NewArmoury.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>						
-
-						<plugin name="None">
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-					</plugins>
-				</group>
-
-				<group name="Heavy Armory" type="SelectExactlyOne">
-					<plugins order="Explicit">
-
-						<plugin name="Heavy Armory - WACCF+CCOR patch">
-							<description>Patch for Weapons Armor Clothing and Clutter Fixes and Complete Crafting Overhaul Remastered (CCOR). Note that CCOR is not compatible with Ars Metallica. Selecting this will hide Ars Metallica options in the installer.</description>
-							<conditionFlags>
-								<flag name="ha-ccor">On</flag>
-							</conditionFlags>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<flagDependency flag="ha" value="On"/>
-												<fileDependency file="Complete Crafting Overhaul_Remastered.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-						<plugin name="Heavy Armory - WACCF patch">
-							<description>Patch for Weapons Armor Clothing and Clutter Fixes, without Complete Crafting Overhaul Remastered.</description>
-							<conditionFlags>
-								<flag name="ha-waccf">On</flag>
-							</conditionFlags>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<flagDependency flag="ha" value="On"/>
-												<fileDependency file="Weapons Armor Clothing &amp; Clutter Fixes.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-						<plugin name="None">
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-					</plugins>
-				</group>
-
-			</optionalFileGroups>
-		</installStep>
-
-		<!-- Ars Metallica -->
-		<installStep name="Ars Metallica patches">
-			<visible>
-				<dependencies operator="And">
-					<flagDependency flag="ha-ccor" value="Off"/>
-					<flagDependency flag="aa-ccor" value="Off"/>
-				</dependencies>
-			</visible>
-			<optionalFileGroups order="Explicit">
-				<group name="Ars Metallica patch version" type="SelectExactlyOne">
-					<plugins order="Explicit">
-
-					<plugin name="Ars Metallica - Animated Armoury + Heavy Armory patch">
-							<conditionFlags>
-								<flag name="ha-am">On</flag>
-								<flag name="aa-am">On</flag>
-							</conditionFlags>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="Ars Metallica.esp" state="Active"/>
-												<flagDependency flag="ha" value="On"/>
-												<fileDependency file="NewArmoury.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-						<plugin name="Ars Metallica - Animated Armoury patch">
-							<conditionFlags>
-								<flag name="aa-am">On</flag>
-							</conditionFlags>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="Ars Metallica.esp" state="Active"/>
-												<fileDependency file="NewArmoury.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-						<plugin name="Ars Metallica - Heavy Armory patch">
-							<conditionFlags>
-								<flag name="ha-am">On</flag>
-							</conditionFlags>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="Ars Metallica.esp" state="Active"/>
-												<flagDependency flag="ha" value="On"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>						
-
-						<plugin name="None">
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-					</plugins>
-				</group>
-
-			</optionalFileGroups>
-		</installStep>
-
-		<!-- Patches -->
-		<installStep name="Other patches">
-			<optionalFileGroups order="Explicit">
-				<group name="Patches" type="SelectAny">
-					<plugins order="Explicit">
-
-						<plugin name="Animated Armoury - Immersive Dayspring Pass patch">
-							<files>
-								<folder source="052 AA - ImmersiveDayspringPass patch" destination="" />
-							</files>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="NewArmoury.esp" state="Active"/>
-												<fileDependency file="AHZBetterDGEntranceSE.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-						<plugin name="Animated Armoury - Unoffical Skyrim Special Edition patch">
-							<description>
-							</description>
-							<files>
-								<folder source="054 AA - USSEP patch" destination="" />
-							</files>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="NewArmoury.esp" state="Active"/>
-												<fileDependency file="Unofficial Skyrim Special Edition Patch.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-					</plugins>
-				</group>
-
-			</optionalFileGroups>
-		</installStep>
-
-		<!-- Animated Armoury -->
-		<installStep name="Fixes">
-			<visible>
-				<dependencies operator="And">
-					<flagDependency flag="aa-wccaf" value="Off"/>
-				</dependencies>
-			</visible>
-			<optionalFileGroups order="Explicit">
-				<group name="Animated Armoury Fixes" type="SelectExactlyOne">
-					<plugins order="Explicit">
-
-						<plugin name="Install Animated Armoury Fixes">
-							<description>A collection of fixes that corrects errors in damage, weight etc for a few weapons.</description>
-							<files>
-								<folder source="051 AA Fixes" destination="" />
-							</files>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="NewArmoury.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-						<plugin name="Do not install">
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-					</plugins>
-				</group>
-
-			</optionalFileGroups>
-		</installStep>
-
-		<!-- Leveled lists patches cont -->
-		<installStep name="Level List Patches">
-			<optionalFileGroups order="Explicit">
-				<group name="Install level list patches for the following mods" type="SelectAny">
-					<plugins order="Explicit">
-
-						<plugin name="Animated Armoury">
-							<description>This will install patches that resolves conflicts in the leveled lists. Installing these patches are not nescessary if you are using a Bashed Patch.</description>
-							<conditionFlags>
-								<flag name="lvl-aa">On</flag>
+								<flag name="aa">On</flag>
 							</conditionFlags>
 							<typeDescriptor>
 								<dependencyType>
@@ -663,9 +192,8 @@ The full verion of Heavy Armory with a few tweaks:
 						</plugin>
 
 						<plugin name="Dawnguard Arsenal">
-							<description>This will install patches that resolves conflicts in the leveled lists. Installing these patches are not nescessary if you are using a Bashed Patch.</description>
 							<conditionFlags>
-								<flag name="lvl-da">On</flag>
+								<flag name="da">On</flag>
 							</conditionFlags>
 							<typeDescriptor>
 								<dependencyType>
@@ -682,10 +210,11 @@ The full verion of Heavy Armory with a few tweaks:
 							</typeDescriptor>
 						</plugin>
 
-						<plugin name="Heavy Armory">
-							<description>This will install patches that resolves conflicts in the leveled lists. Installing these patches are not nescessary if you are using a Bashed Patch.</description>
+						<plugin name="Immersive Dayspring Pass patch">
+							<description>
+							</description>
 							<conditionFlags>
-								<flag name="lvl-ha">On</flag>
+								<flag name="idp">On</flag>
 							</conditionFlags>
 							<typeDescriptor>
 								<dependencyType>
@@ -693,7 +222,7 @@ The full verion of Heavy Armory with a few tweaks:
 									<patterns>
 										<pattern>
 											<dependencies operator="And">
-												<flagDependency flag="ha" value="On"/>
+												<fileDependency file="AHZBetterDGEntranceSE.esp" state="Active"/>												
 											</dependencies>
 											<type name="Recommended"/>
 										</pattern>
@@ -705,7 +234,7 @@ The full verion of Heavy Armory with a few tweaks:
 						<plugin name="Mysticism">
 							<description>This will install patches that resolves conflicts in the leveled lists. Installing these patches are not nescessary if you are using a Bashed Patch.</description>
 							<conditionFlags>
-								<flag name="lvl-mysticism">On</flag>
+								<flag name="mysticism">On</flag>
 							</conditionFlags>
 							<typeDescriptor>
 								<dependencyType>
@@ -722,29 +251,176 @@ The full verion of Heavy Armory with a few tweaks:
 							</typeDescriptor>
 						</plugin>
 
+						<plugin name="Unoffical Skyrim Special Edition patch">
+							<description>
+							</description>
+							<conditionFlags>
+								<flag name="ussep">On</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="Unofficial Skyrim Special Edition Patch.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
 					</plugins>
 				</group>
+
 			</optionalFileGroups>
 		</installStep>
-
-		<!-- Leveled lists patches cont 2-->
-		<installStep name="WACCF Level List Patches">
+		<!-- WACCF + CCOR -->
+		<installStep name="Mod selection">
 			<visible>
 				<dependencies operator="And">
-					<flagDependency flag="aa-waccf" value="On"/>
-					<flagDependency flag="ha-waccf" value="On"/>
-					<flagDependency flag="aa-ccor" value="Off"/>
-					<flagDependency flag="ha-ccor" value="Off"/>
+					<flagDependency flag="balance" value="Off"/>
 				</dependencies>
 			</visible>
 			<optionalFileGroups order="Explicit">
-				<group name="Install level list patches for the following mods" type="SelectExactlyOne">
+				<group name="WACCF / CCOR" type="SelectExactlyOne">
 					<plugins order="Explicit">
 
-						<plugin name="Heavy Armory and Animated Armoury WACCF patches (recommended)">
-							<description>This will install patches that resolves conflicts in the leveled lists. Installing these patches are not nescessary if you are using a Bashed Patch.</description>
+						<plugin name="WACCF + CCOR">
+							<description>Choose this if you use Weapons Armor Clothing and Clutter Fixes and Complete Crafting Overhaul Remastered.</description>
 							<conditionFlags>
-								<flag name="lvl-waccf">On</flag>
+								<flag name="waccf">On</flag>
+								<flag name="ccor">On</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="Complete Crafting Overhaul_Remastered.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="WACCF">
+							<description>Choose this if you use Weapons Armor Clothing and Clutter Fixes without Complete Crafting Overhaul Remastered.</description>
+							<conditionFlags>
+								<flag name="waccf">On</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="Weapons Armor Clothing &amp; Clutter Fixes.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>						
+
+						<plugin name="None">
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Recommended"/>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+					</plugins>
+				</group>				
+			</optionalFileGroups>
+		</installStep>
+		
+		<!-- Ars Metallica -->
+		<installStep name="Ars Metallica">
+			<visible>
+				<dependencies operator="And">
+					<flagDependency flag="ccor" value="Off"/>
+				</dependencies>
+			</visible>
+			<optionalFileGroups order="Explicit">
+				<group name="Do you use Ars Metllica?" type="SelectExactlyOne">
+					<plugins order="Explicit">
+
+					<plugin name="Yes">
+							<conditionFlags>
+								<flag name="am">On</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="Ars Metallica.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="No">
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Recommended"/>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+					</plugins>
+				</group>
+
+			</optionalFileGroups>
+		</installStep>
+
+		<installStep name="Ars Metallica">
+			<visible>
+				<dependencies operator="And">
+					<flagDependency flag="ccor" value="On"/>
+				</dependencies>
+			</visible>
+			<optionalFileGroups order="Explicit">
+				<group name="Do you use Ars Metllica?" type="SelectExactlyOne">
+					<plugins order="Explicit">
+
+						<plugin name="No">
+						<description>Ars Metallica patches will not be installed since you have selected Complete Crafting Overhaul Remastered, which is incompatible with Ars Metallica.</description>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Recommended"/>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+					</plugins>
+				</group>
+
+			</optionalFileGroups>
+		</installStep>
+
+		<!-- Leveled lists patches -->
+		<installStep name="Level List Patches">
+			<optionalFileGroups order="Explicit">
+				<group name="Do you want to install level list patches?" type="SelectAny">
+					<plugins order="Explicit">
+
+						<plugin name="Yes">
+							<description>Selecting yes will install patches that resolves conflicts in the leveled lists. Installing these patches are not nescessary if you are using a Bashed Patch.</description>
+							<conditionFlags>
+								<flag name="lvl">On</flag>
 							</conditionFlags>
 							<typeDescriptor>
 								<dependencyType>
@@ -753,38 +429,34 @@ The full verion of Heavy Armory with a few tweaks:
 							</typeDescriptor>
 						</plugin>
 
-						<plugin name="None">
+						<plugin name="No">
+							<description>Selecting yes will install patches that resolves conflicts in the leveled lists. Installing these patches are not nescessary if you are using a Bashed Patch.</description>
 							<typeDescriptor>
 								<dependencyType>
 									<defaultType name="Optional"/>
 								</dependencyType>
 							</typeDescriptor>
-						</plugin>
-
+						</plugin>						
 
 					</plugins>
 				</group>
 			</optionalFileGroups>
 		</installStep>
 
-		<installStep name="CCOR Level List Patches">
+		<!-- Information -->
+		<installStep name="Ars Metallica - Dawnguard Arsenal">
 			<visible>
 				<dependencies operator="And">
-					<flagDependency flag="aa-waccf" value="Off"/>
-					<flagDependency flag="ha-waccf" value="Off"/>
-					<flagDependency flag="aa-ccor" value="On"/>
-					<flagDependency flag="ha-ccor" value="On"/>
+					<flagDependency flag="am" value="On"/>
+					<flagDependency flag="da" value="On"/>
 				</dependencies>
 			</visible>
 			<optionalFileGroups order="Explicit">
-				<group name="Install level list patches for the following mods" type="SelectExactlyOne">
+				<group name="Information" type="SelectExactlyOne">
 					<plugins order="Explicit">
 
-						<plugin name="Heavy Armory and Animated Armoury WACCF+CCOR patches (recommended)">
-							<description>This will install patches that resolves conflicts in the leveled lists. Installing these patches are not nescessary if you are using a Bashed Patch.</description>
-							<conditionFlags>
-								<flag name="lvl-ccor">On</flag>
-							</conditionFlags>
+						<plugin name="Ok">
+						<description>Install the Ars Metallica patch from Dawnguard Arsenals nexus page to get breakdown recipes for Dawnguard Arsenal.</description>
 							<typeDescriptor>
 								<dependencyType>
 									<defaultType name="Recommended"/>
@@ -792,20 +464,38 @@ The full verion of Heavy Armory with a few tweaks:
 							</typeDescriptor>
 						</plugin>
 
-						<plugin name="None">
+					</plugins>
+				</group>
+
+			</optionalFileGroups>
+		</installStep>
+
+		<installStep name="Ars Metallica - WACCF">
+			<visible>
+				<dependencies operator="And">
+					<flagDependency flag="am" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+			</visible>
+			<optionalFileGroups order="Explicit">
+				<group name="Information" type="SelectExactlyOne">
+					<plugins order="Explicit">
+
+						<plugin name="Ok">
+						<description>Install the Ars Metallica / Weapons Armor Clothing Clutter fixes patch from Kryptopyr's patch hub on the nexus.</description>
 							<typeDescriptor>
 								<dependencyType>
-									<defaultType name="Optional"/>
+									<defaultType name="Recommended"/>
 								</dependencyType>
 							</typeDescriptor>
 						</plugin>
 
-
 					</plugins>
 				</group>
+
 			</optionalFileGroups>
 		</installStep>
-
+		
 	</installSteps>
 
 	<!-- ****************************** -->
@@ -833,11 +523,39 @@ The full verion of Heavy Armory with a few tweaks:
 				</files>
 			</pattern>
 
+			<!-- Misc mods -->
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="idp" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="051 AA - ImmersiveDayspringPass patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ussep" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="052 AA - USSEP patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="aa" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="050 AA Fixes" destination="" />
+				</files>
+			</pattern>
+
 			<!-- waccf ccor patches -->
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="ha-waccf" value="On"/>
-					<flagDependency flag="ha-ccor" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="Off"/>
 					<flagDependency flag="ha-lite" value="Off"/>
 				</dependencies>
 				<files>
@@ -846,8 +564,8 @@ The full verion of Heavy Armory with a few tweaks:
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="ha-waccf" value="On"/>
-					<flagDependency flag="ha-ccor" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="Off"/>
 					<flagDependency flag="ha-lite" value="On"/>
 				</dependencies>
 				<files>
@@ -856,7 +574,7 @@ The full verion of Heavy Armory with a few tweaks:
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="ha-ccor" value="On"/>
+					<flagDependency flag="ccor" value="On"/>
 					<flagDependency flag="ha-lite" value="Off"/>
 				</dependencies>
 				<files>
@@ -865,7 +583,7 @@ The full verion of Heavy Armory with a few tweaks:
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="ha-ccor" value="On"/>
+					<flagDependency flag="ccor" value="On"/>
 					<flagDependency flag="ha-lite" value="On"/>
 				</dependencies>
 				<files>
@@ -876,9 +594,10 @@ The full verion of Heavy Armory with a few tweaks:
 			<!-- ars metallica -->
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="aa-am" value="Off"/>
-					<flagDependency flag="ha-am" value="On"/>
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="am" value="On"/>
 				</dependencies>
 				<files>
 					<folder source="042 ArsMetallica-HALite" destination="" />
@@ -886,9 +605,10 @@ The full verion of Heavy Armory with a few tweaks:
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="aa-am" value="On"/>
-					<flagDependency flag="ha-am" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="am" value="On"/>
 				</dependencies>
 				<files>
 					<folder source="044 ArsMetallica-HALite-AA" destination="" />
@@ -897,9 +617,10 @@ The full verion of Heavy Armory with a few tweaks:
 
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="aa-am" value="Off"/>
-					<flagDependency flag="ha-am" value="On"/>
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="am" value="On"/>
 				</dependencies>
 				<files>
 					<folder source="041 ArsMetallica-HAFull" destination="" />
@@ -907,9 +628,10 @@ The full verion of Heavy Armory with a few tweaks:
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="aa-am" value="On"/>
-					<flagDependency flag="ha-am" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="am" value="On"/>
 				</dependencies>
 				<files>
 					<folder source="043 ArsMetallica-HAFull-AA" destination="" />
@@ -918,8 +640,9 @@ The full verion of Heavy Armory with a few tweaks:
 
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="aa-am" value="On"/>
-					<flagDependency flag="ha-am" value="Off"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="Off"/>
+					<flagDependency flag="am" value="On"/>
 				</dependencies>
 				<files>
 					<folder source="040 ArsMetallica-AA" destination="" />
@@ -930,9 +653,10 @@ The full verion of Heavy Armory with a few tweaks:
 
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="lvl-aa" value="On"/>
-					<flagDependency flag="lvl-ha" value="On"/>
-					<flagDependency flag="lvl-da" value="Off"/>
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="da" value="Off"/>
 					<flagDependency flag="ha-lite" value="Off"/>
 				</dependencies>
 				<files>
@@ -941,9 +665,10 @@ The full verion of Heavy Armory with a few tweaks:
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="lvl-aa" value="Off"/>
-					<flagDependency flag="lvl-ha" value="On"/>
-					<flagDependency flag="lvl-da" value="On"/>
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="da" value="On"/>
 					<flagDependency flag="ha-lite" value="Off"/>
 				</dependencies>
 				<files>
@@ -952,9 +677,10 @@ The full verion of Heavy Armory with a few tweaks:
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="lvl-aa" value="On"/>
-					<flagDependency flag="lvl-ha" value="On"/>
-					<flagDependency flag="lvl-da" value="On"/>
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="da" value="On"/>
 					<flagDependency flag="ha-lite" value="Off"/>
 				</dependencies>
 				<files>
@@ -964,9 +690,10 @@ The full verion of Heavy Armory with a few tweaks:
 
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="lvl-aa" value="On"/>
-					<flagDependency flag="lvl-ha" value="On"/>
-					<flagDependency flag="lvl-da" value="Off"/>
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="da" value="Off"/>
 					<flagDependency flag="ha-lite" value="On"/>
 				</dependencies>
 				<files>
@@ -975,9 +702,10 @@ The full verion of Heavy Armory with a few tweaks:
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="lvl-aa" value="Off"/>
-					<flagDependency flag="lvl-ha" value="On"/>
-					<flagDependency flag="lvl-da" value="On"/>
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="da" value="On"/>
 					<flagDependency flag="ha-lite" value="On"/>
 				</dependencies>
 				<files>
@@ -986,9 +714,10 @@ The full verion of Heavy Armory with a few tweaks:
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="lvl-aa" value="On"/>
-					<flagDependency flag="lvl-ha" value="On"/>
-					<flagDependency flag="lvl-da" value="On"/>
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="da" value="On"/>
 					<flagDependency flag="ha-lite" value="On"/>
 				</dependencies>
 				<files>
@@ -997,9 +726,10 @@ The full verion of Heavy Armory with a few tweaks:
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="lvl-aa" value="On"/>
-					<flagDependency flag="lvl-ha" value="Off"/>
-					<flagDependency flag="lvl-da" value="On"/>
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="Off"/>
+					<flagDependency flag="da" value="On"/>
 				</dependencies>
 				<files>
 					<folder source="101 DawnguardArsenal-AA Lvl list patch" destination="" />
@@ -1008,8 +738,9 @@ The full verion of Heavy Armory with a few tweaks:
 
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="lvl-aa" value="On"/>
-					<flagDependency flag="lvl-mysticism" value="On"/>
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="mysticism" value="On"/>
 				</dependencies>
 				<files>
 					<folder source="102 Mysticism-AA Lvl list patch" destination="" />
@@ -1017,7 +748,8 @@ The full verion of Heavy Armory with a few tweaks:
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="lvl-waccf" value="On"/>
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
 					<flagDependency flag="ha-lite" value="On"/>
 				</dependencies>
 				<files>
@@ -1026,7 +758,8 @@ The full verion of Heavy Armory with a few tweaks:
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="lvl-ccor" value="On"/>
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ccor" value="On"/>
 					<flagDependency flag="ha-lite" value="On"/>
 				</dependencies>
 				<files>
@@ -1035,7 +768,9 @@ The full verion of Heavy Armory with a few tweaks:
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="lvl-waccf" value="On"/>
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ha-lite" value="Off"/>
 				</dependencies>
 				<files>
@@ -1044,7 +779,9 @@ The full verion of Heavy Armory with a few tweaks:
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="lvl-ccor" value="On"/>
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ccor" value="On"/>
+					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ha-lite" value="Off"/>
 				</dependencies>
 				<files>
