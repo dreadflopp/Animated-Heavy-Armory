@@ -593,6 +593,15 @@ The full verion of Heavy Armory with a few tweaks:
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
+					<flagDependency flag="da" value="On"/>
+					<flagDependency flag="idp" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="053 DawnguardArsenal - ImmersiveDayspringPass patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ussep" value="On"/>
 				</dependencies>
@@ -603,6 +612,7 @@ The full verion of Heavy Armory with a few tweaks:
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="050 AA Fixes" destination="" />
@@ -712,47 +722,21 @@ The full verion of Heavy Armory with a few tweaks:
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="da" value="Off"/>
-					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="mysticism" value="On"/>
+					<flagDependency flag="aa" value="On"/>					
 				</dependencies>
 				<files>
-					<folder source="105 HAFull-AA Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="aa" value="Off"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="da" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="103 DawnguardArsenal-HAFull Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="da" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="104 DawnguardArsenal-HAFull-AA Lvl list patch" destination="" />
+					<folder source="101 Mysticism-AA Lvl list patch" destination="" />
 				</files>
 			</pattern>
 
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="da" value="Off"/>
 					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+					<flagDependency flag="ccor" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="110 HALite-AA Lvl list patch" destination="" />
@@ -761,54 +745,10 @@ The full verion of Heavy Armory with a few tweaks:
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="aa" value="Off"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="da" value="On"/>
 					<flagDependency flag="ha-lite" value="On"/>
-				</dependencies>
-				<files>
-					<folder source="108 DawnguardArsenal-HALite Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="da" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-				</dependencies>
-				<files>
-					<folder source="109 DawnguardArsenal-HALite-AA Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ha" value="Off"/>
-					<flagDependency flag="da" value="On"/>
-				</dependencies>
-				<files>
-					<folder source="101 DawnguardArsenal-AA Lvl list patch" destination="" />
-				</files>
-			</pattern>
-
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="mysticism" value="On"/>
-				</dependencies>
-				<files>
-					<folder source="102 Mysticism-AA Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="waccf" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="ccor" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="111 HALite-AA-WACCF Lvl list patch" destination="" />
@@ -816,36 +756,188 @@ The full verion of Heavy Armory with a few tweaks:
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="ccor" value="On"/>
+					<<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="On"/>
 				</dependencies>
 				<files>
 					<folder source="112 HALite-AA-WACCF-CCOR Lvl list patch" destination="" />
 				</files>
 			</pattern>
+
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+					<flagDependency flag="ccor" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="120 HAFull-AA Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="waccf" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ccor" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="106 HAFull-AA-WACCF Lvl list patch" destination="" />
+					<folder source="121 HAFull-AA-WACCF Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="ccor" value="On"/>
 					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="107 HAFull-AA-WACCF-CCOR Lvl list patch" destination="" />
+					<folder source="122 HAFull-AA-WACCF-CCOR Lvl list patch" destination="" />
 				</files>
 			</pattern>
+
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="da" value="On"/>
+					<flagDependency flag="ha" value="Off"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+					<flagDependency flag="ccor" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="201 DawnguardArsenal-AA Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="da" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+					<flagDependency flag="ccor" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="202 DawnguardArsenal-HAFull Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="da" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+					<flagDependency flag="ccor" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="203 DawnguardArsenal-HALite Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="da" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+					<flagDependency flag="ccor" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="204 DawnguardArsenal-HAFull-AA Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="da" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="205 DawnguardArsenal-HAFull-AA-WACCF Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="da" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="206 DawnguardArsenal-HAFull-AA-WACCF-CCOR Lvl list patch" destination="" />
+				</files>
+			</pattern>			
+			
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="da" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+					<flagDependency flag="ccor" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="207 DawnguardArsenal-HALite-AA Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="da" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="208 DawnguardArsenal-HALite-AA-WACCF Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="da" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="209 DawnguardArsenal-HALite-AA-WACCF-CCOR Lvl list patch" destination="" />
+				</files>
+			</pattern>
+
+			
+			
+			
 		</patterns>
 	</conditionalFileInstalls>
 </config>
