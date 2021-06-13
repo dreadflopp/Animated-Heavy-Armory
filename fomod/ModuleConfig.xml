@@ -756,7 +756,7 @@ The full verion of Heavy Armory with a few tweaks:
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
-					<<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ha-lite" value="On"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="waccf" value="On"/>
