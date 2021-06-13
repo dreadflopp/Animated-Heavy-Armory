@@ -5,7 +5,7 @@
 		<!-- Welcome -->
 		<installStep name="Welcome">
 			<optionalFileGroups order="Explicit">
-				<group name="" type="SelectExactlyOne">
+				<group name="Information" type="SelectExactlyOne">
 					<plugins order="Explicit">
 						<plugin name="Ok">
 							<description>
@@ -33,8 +33,8 @@ This installer will guide you through the installation of:
 							</conditionFlags>
 							<typeDescriptor>
 								<dependencyType>
-									<defaultType name="Recommended"/>
-								</dependencyType>
+									<defaultType name="Recommended"/>									
+								</dependencyType>								
 							</typeDescriptor>
 						</plugin>
 					</plugins>
@@ -70,7 +70,7 @@ The lite verion of Heavy Armory with a few tweaks:
 							</files>
 							<typeDescriptor>
 								<dependencyType>
-									<defaultType name="Recommended"/>
+									<defaultType name="Recommended"/>									
 								</dependencyType>
 							</typeDescriptor>
 						</plugin>
@@ -95,6 +95,7 @@ The full verion of Heavy Armory with a few tweaks:
 							<typeDescriptor>
 								<dependencyType>
 									<defaultType name="Optional"/>
+									
 								</dependencyType>
 							</typeDescriptor>
 						</plugin>
@@ -103,7 +104,7 @@ The full verion of Heavy Armory with a few tweaks:
 							<description>Do not install Heavy Armory.</description>
 							<typeDescriptor>
 								<dependencyType>
-									<defaultType name="Optional"/>
+									<defaultType name="Optional"/>									
 								</dependencyType>
 							</typeDescriptor>
 						</plugin>
@@ -201,9 +202,6 @@ The full verion of Heavy Armory with a few tweaks:
 							<conditionFlags>
 								<flag name="balance">Off</flag>
 							</conditionFlags>
-							<files>
-								<folder source="020 Balance tweaks for Animated Armoury" destination="" />
-							</files>
 							<typeDescriptor>
 								<dependencyType>
 									<defaultType name="Optional"/>
@@ -624,10 +622,42 @@ The full verion of Heavy Armory with a few tweaks:
 				<dependencies operator="And">
 					<flagDependency flag="waccf" value="On"/>
 					<flagDependency flag="ccor" value="Off"/>
+					<flagDependency flag="aa" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="030 AA-WACCF" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="031 AA-WACCF-CCOR" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ha-lite" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="032 HAFull-WACCF" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="033 HAFull-WACCF-CCOR" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -639,18 +669,10 @@ The full verion of Heavy Armory with a few tweaks:
 				<files>
 					<folder source="034 HALite-WACCF" destination="" />
 				</files>
-			</pattern>
+			</pattern>			
 			<pattern>
 				<dependencies operator="And">
-					<flagDependency flag="ccor" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="033 HAFull-WACCF-CCOR" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
+					<flagDependency flag="waccf" value="On"/>
 					<flagDependency flag="ccor" value="On"/>
 					<flagDependency flag="ha-lite" value="On"/>
 				</dependencies>
