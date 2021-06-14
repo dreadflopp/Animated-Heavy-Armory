@@ -28,6 +28,7 @@ This installer will guide you through the installation of:
 								<flag name="waccf">Off</flag>
 								<flag name="ccor">Off</flag>
 								<flag name="am">Off</flag>
+								<flag name="adamant">Off</flag>
 								<flag name="lvl">Off</flag>
 
 							</conditionFlags>
@@ -222,11 +223,102 @@ The full verion of Heavy Armory with a few tweaks:
 			</optionalFileGroups>
 		</installStep>
 
+		<!-- Skill Descriptions -->
+		<installStep name="Skill Descriptions Installation">
+			<optionalFileGroups order="Explicit">
+				<group name="Balance Tweaks" type="SelectExactlyOne">
+					<plugins order="Explicit">
+
+						<plugin name="Install skill descriptions for WACCF">
+							<description>This will patch the skill descriptions for WACCF users. The naming of weapon types in the skill descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
+							<files>
+								<folder source="061 WACCF Skill Descriptions" destination="" />
+							</files>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="Weapons Armor Clothing &amp; Clutter Fixes.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="Install skill descriptions for Adamant">
+							<description>This will patch the skill descriptions for Adamant users. The naming of weapon types in the skill descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
+							<files>
+								<folder source="062 Adamant Skill Descriptions" destination="" />
+							</files>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="Adamant.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="Install skill descriptions for vanilla">
+							<description>This will patch the skill descriptions for vanilla users. The naming of weapon types in the skill descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
+							<files>
+								<folder source="060 Vanilla Skill Descriptions" destination="" />
+							</files>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Recommended"/>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+
+						<plugin name="Do not install skill descriptions">
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+
 		<!-- Mod selection -->
 		<installStep name="Mod selection">
 			<optionalFileGroups order="Explicit">
 				<group name="Select all mod you use" type="SelectAny">
 					<plugins order="Explicit">
+
+						<plugin name="Adamant">
+							<conditionFlags>
+								<flag name="adamant">On</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="Adamant.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
 
 						<plugin name="Animated Armoury">
 							<conditionFlags>
