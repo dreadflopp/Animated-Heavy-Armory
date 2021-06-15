@@ -117,13 +117,13 @@ The full verion of Heavy Armory with a few tweaks:
 
 		<!-- Animations -->
 		<installStep name="Animations">
-		<visible>
+			<visible>
 				<dependencies operator="And">
 					<flagDependency flag="ha" value="On"/>
 				</dependencies>
 			</visible>
 			<optionalFileGroups order="Explicit">
-				<group name="Select the animations you want to install" type="SelectAny">
+				<group name="Select animations" type="SelectAny">
 					<plugins order="Explicit">
 
 						<plugin name="Animations for Quarterstaffs">
@@ -223,16 +223,16 @@ The full verion of Heavy Armory with a few tweaks:
 			</optionalFileGroups>
 		</installStep>
 
-		<!-- Skill Descriptions -->
-		<installStep name="Skill Descriptions Installation">
+		<!-- Perk Descriptions -->
+		<installStep name="Perk Descriptions Installation">
 			<optionalFileGroups order="Explicit">
-				<group name="Balance Tweaks" type="SelectExactlyOne">
+				<group name="Perks Desciptions" type="SelectExactlyOne">
 					<plugins order="Explicit">
 
-						<plugin name="Install skill descriptions for WACCF">
-							<description>This will patch the skill descriptions for WACCF users. The naming of weapon types in the skill descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
+						<plugin name="Install perl descriptions for WACCF">
+							<description>This will patch the perk descriptions for WACCF users. The naming of weapon types in the perk descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
 							<files>
-								<folder source="061 WACCF Skill Descriptions" destination="" />
+								<folder source="061 WACCF Perk Descriptions" destination="" />
 							</files>
 							<typeDescriptor>
 								<dependencyType>
@@ -249,10 +249,10 @@ The full verion of Heavy Armory with a few tweaks:
 							</typeDescriptor>
 						</plugin>
 
-						<plugin name="Install skill descriptions for Adamant">
-							<description>This will patch the skill descriptions for Adamant users. The naming of weapon types in the skill descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
+						<plugin name="Install perk descriptions for Adamant">
+							<description>This will patch the perk descriptions for Adamant users. The naming of weapon types in the perk descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
 							<files>
-								<folder source="062 Adamant Skill Descriptions" destination="" />
+								<folder source="062 Adamant Perk Descriptions" destination="" />
 							</files>
 							<typeDescriptor>
 								<dependencyType>
@@ -269,10 +269,10 @@ The full verion of Heavy Armory with a few tweaks:
 							</typeDescriptor>
 						</plugin>
 
-						<plugin name="Install skill descriptions for vanilla">
-							<description>This will patch the skill descriptions for vanilla users. The naming of weapon types in the skill descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
+						<plugin name="Install perk descriptions for vanilla">
+							<description>This will patch the perk descriptions for vanilla users. The naming of weapon types in the perk descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
 							<files>
-								<folder source="060 Vanilla Skill Descriptions" destination="" />
+								<folder source="060 Vanilla Perk Descriptions" destination="" />
 							</files>
 							<typeDescriptor>
 								<dependencyType>
@@ -282,7 +282,7 @@ The full verion of Heavy Armory with a few tweaks:
 						</plugin>
 
 
-						<plugin name="Do not install skill descriptions">
+						<plugin name="Do not install perk descriptions">
 							<typeDescriptor>
 								<dependencyType>
 									<defaultType name="Optional"/>
@@ -298,7 +298,7 @@ The full verion of Heavy Armory with a few tweaks:
 		<!-- Mod selection -->
 		<installStep name="Mod selection">
 			<optionalFileGroups order="Explicit">
-				<group name="Select all mod you use" type="SelectAny">
+				<group name="Select all mods you use" type="SelectAny">
 					<plugins order="Explicit">
 
 						<plugin name="Adamant">
@@ -703,6 +703,7 @@ The full verion of Heavy Armory with a few tweaks:
 				<dependencies operator="And">
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="waccf" value="Off"/>
+					<flagDependency flag="balance" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="050 AA Fixes" destination="" />
