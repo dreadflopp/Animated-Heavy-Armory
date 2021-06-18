@@ -23,6 +23,7 @@ This installer will guide you through the installation of:
 								<flag name="aa">Off</flag>
 								<flag name="da">Off</flag>
 								<flag name="idp">Off</flag>
+								<flag name="ssm">Off</flag>
 								<flag name="ussep">Off</flag>
 								<flag name="balance">Off</flag>
 								<flag name="waccf">Off</flag>
@@ -359,8 +360,6 @@ The full verion of Heavy Armory with a few tweaks:
 						</plugin>
 
 						<plugin name="Immersive Dayspring Pass patch">
-							<description>
-							</description>
 							<conditionFlags>
 								<flag name="idp">On</flag>
 							</conditionFlags>
@@ -380,7 +379,6 @@ The full verion of Heavy Armory with a few tweaks:
 						</plugin>
 
 						<plugin name="Mysticism">
-							<description>This will install patches that resolves conflicts in the leveled lists. Installing these patches are not nescessary if you are using a Bashed Patch.</description>
 							<conditionFlags>
 								<flag name="mysticism">On</flag>
 							</conditionFlags>
@@ -391,6 +389,25 @@ The full verion of Heavy Armory with a few tweaks:
 										<pattern>
 											<dependencies operator="And">
 												<fileDependency file="MysticismMagic.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="Skyrim Spear Mechanic">
+							<conditionFlags>
+								<flag name="ssm">On</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="SkyrimSpearMechanic.esp" state="Active"/>
 											</dependencies>
 											<type name="Recommended"/>
 										</pattern>
@@ -780,6 +797,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="aa" value="Off"/>
 					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="am" value="On"/>
 				</dependencies>
 				<files>
@@ -791,6 +809,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="am" value="On"/>
 				</dependencies>
 				<files>
@@ -803,6 +822,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="aa" value="Off"/>
 					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="am" value="On"/>
 				</dependencies>
 				<files>
@@ -814,6 +834,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="am" value="On"/>
 				</dependencies>
 				<files>
@@ -825,12 +846,78 @@ The full verion of Heavy Armory with a few tweaks:
 				<dependencies operator="And">
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="Off"/>
+					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="am" value="On"/>
 				</dependencies>
 				<files>
 					<folder source="040 ArsMetallica-AA" destination="" />
 				</files>
 			</pattern>
+
+
+
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="am" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="045 ArsMetallica-HALite-SSM" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="am" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="046 ArsMetallica-HALite-AA-SSM" destination="" />
+				</files>
+			</pattern>
+
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="am" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="047 ArsMetallica-HAFull-SSM" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="am" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="048 ArsMetallica-HAFull-AA-SSM" destination="" />
+				</files>
+			</pattern>
+
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="am" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="049 ArsMetallica-AA-SSM" destination="" />
+				</files>
+			</pattern>
+
 
 			<!-- Level list patches -->
 
