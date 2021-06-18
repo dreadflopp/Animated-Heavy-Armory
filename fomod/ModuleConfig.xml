@@ -790,6 +790,15 @@ The full verion of Heavy Armory with a few tweaks:
 					<folder source="035 HALite-WACCF-CCOR" destination="" />
 				</files>
 			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="ccor" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="036 SSM-CCOR" destination="" />
+				</files>
+			</pattern>
 
 			<!-- ars metallica -->
 			<pattern>
@@ -1107,6 +1116,17 @@ The full verion of Heavy Armory with a few tweaks:
 					<folder source="115 HALite-AA-WACCF-CCOR-SSPM Lvl list patch" destination="" />
 				</files>
 			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="116 HALite-SSM Lvl list patch" destination="" />
+				</files>
+			</pattern>
 
 			<pattern>
 				<dependencies operator="And">
@@ -1192,6 +1212,30 @@ The full verion of Heavy Armory with a few tweaks:
 					<folder source="125 HAFull-AA-WACCF-CCOR-SSM Lvl list patch" destination="" />
 				</files>
 			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="126 HAFull-SSM Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ha" value="Off"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="130 AA-SSM Lvl list patch" destination="" />
+				</files>
+			</pattern>
+
 
 
 			<pattern>
