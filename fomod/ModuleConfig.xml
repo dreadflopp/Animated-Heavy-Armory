@@ -854,8 +854,6 @@ The full verion of Heavy Armory with a few tweaks:
 				</files>
 			</pattern>
 
-
-
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="aa" value="Off"/>
@@ -918,6 +916,105 @@ The full verion of Heavy Armory with a few tweaks:
 				</files>
 			</pattern>
 
+			<!-- Blacksmith patces == (NOT CCOR AND NOT ArsMetallica) -->
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="Off"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="am" value="Off"/>
+					<flagDependency flag="ccor" value="Off"/>					
+				</dependencies>
+				<files>
+					<folder source="076 AA-SSM-Blacksmith Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="Off"/>
+					<flagDependency flag="am" value="Off"/>
+					<flagDependency flag="ccor" value="Off"/>					
+				</dependencies>
+				<files>
+					<folder source="070 HAFull-AA-Blacksmith Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="am" value="Off"/>
+					<flagDependency flag="ccor" value="Off"/>					
+				</dependencies>
+				<files>
+					<folder source="071 HAFull-AA-SSM-Blacksmith Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="am" value="Off"/>
+					<flagDependency flag="ccor" value="Off"/>					
+				</dependencies>
+				<files>
+					<folder source="072 HAFull-SSM-Blacksmith Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="ssm" value="Off"/>
+					<flagDependency flag="am" value="Off"/>
+					<flagDependency flag="ccor" value="Off"/>					
+				</dependencies>
+				<files>
+					<folder source="073 HALite-AA-Blacksmith Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="am" value="Off"/>
+					<flagDependency flag="ccor" value="Off"/>					
+				</dependencies>
+				<files>
+					<folder source="074 HALite-AA-SPM-Blacksimth Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="am" value="Off"/>
+					<flagDependency flag="ccor" value="Off"/>					
+				</dependencies>
+				<files>
+					<folder source="075 HALite-SSM-Blacksmith Lvl list patch" destination="" />
+				</files>
+			</pattern>
 
 			<!-- Level list patches -->
 
