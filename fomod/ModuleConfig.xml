@@ -515,7 +515,7 @@ The full verion of Heavy Armory with a few tweaks:
 				</dependencies>
 			</visible>
 			<optionalFileGroups order="Explicit">
-				<group name="Do you use Ars Metllica?" type="SelectExactlyOne">
+				<group name="Do you use Ars Metallica?" type="SelectExactlyOne">
 					<plugins order="Explicit">
 
 					<plugin name="Yes">
