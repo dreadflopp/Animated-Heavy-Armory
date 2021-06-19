@@ -230,7 +230,7 @@ The full verion of Heavy Armory with a few tweaks:
 				<group name="Perks Desciptions" type="SelectExactlyOne">
 					<plugins order="Explicit">
 
-						<plugin name="Install perl descriptions for WACCF">
+						<plugin name="Install perk descriptions for WACCF">
 							<description>This will patch the perk descriptions for WACCF users. The naming of weapon types in the perk descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
 							<files>
 								<folder source="061 WACCF Perk Descriptions" destination="" />
