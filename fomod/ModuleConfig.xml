@@ -1113,7 +1113,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ccor" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="115 HALite-AA-SSPM-WACCF-CCOR Lvl list patch" destination="" />
+					<folder source="115 HALite-AA-SSM-WACCF-CCOR Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1181,7 +1181,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ccor" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="123 HAFull-AA-SSP Lvl list patch" destination="" />
+					<folder source="123 HAFull-AA-SSM Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1195,7 +1195,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ccor" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="124 HAFull-AA-SSP-WACCF Lvl list patch" destination="" />
+					<folder source="124 HAFull-AA-SSM-WACCF Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
