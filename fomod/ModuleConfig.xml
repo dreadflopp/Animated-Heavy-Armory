@@ -181,7 +181,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<plugins order="Explicit">
 
 						<plugin name="Install balance tweaks">
-							<description>This will install balancing tweaks for Heavy Armory and/or Animated Armoury. Note that these balancing tweaks are not compatible with Weapons Armors Clothing Clutter Fixes. Selecting this will hide WACCF options in the installer.</description>
+							<description>This will install balancing tweaks for Heavy Armory, Skyrim Spear Mechanic and/or Animated Armoury. Note that these balancing tweaks are not compatible with Weapons Armors Clothing Clutter Fixes. Selecting this will hide WACCF options in the installer.</description>
 							<conditionFlags>
 								<flag name="balance">On</flag>
 							</conditionFlags>
@@ -576,6 +576,43 @@ The full verion of Heavy Armory with a few tweaks:
 			</optionalFileGroups>
 		</installStep>
 
+		<!-- Javelin disabler -->
+		<installStep name="Skyrim Spear Mechanic">
+			<visible>
+				<dependencies operator="And">
+					<flagDependency flag="ssm" value="On"/>
+				</dependencies>
+			</visible>
+			<optionalFileGroups order="Explicit">
+				<group name="Javelin disabler" type="SelectExactlyOne">
+					<plugins order="Explicit">
+
+						<plugin name="Install Javelin disabler">
+							<description>The Javelin disabler will disable all crafting recipes for the javelins from Skyrim Spear Mechanic.</description>
+							<files>
+								<folder source="090 Javelin disabler" destination="" />
+							</files>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="Do not install Javelin disabler">
+							<description>The Javelin disabler will disable all crafting recipes for the javelins from Skyrim Spear Mechanic.</description>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Recommended"/>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+
 		<!-- Leveled lists patches -->
 		<installStep name="Level List Patches">
 			<optionalFileGroups order="Explicit">
@@ -685,6 +722,15 @@ The full verion of Heavy Armory with a few tweaks:
 				</dependencies>
 				<files>
 					<folder source="020 Balance tweaks for Animated Armoury" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="balance" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="022 Balance tweaks for Skyrim Spear Mechanic" destination="" />
 				</files>
 			</pattern>
 
