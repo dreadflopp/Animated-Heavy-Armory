@@ -328,7 +328,7 @@ The full verion of Heavy Armory with a few tweaks:
 			<optionalFileGroups order="Explicit">
 				<group name="Select all mods you use" type="SelectAny">
 					<plugins order="Explicit">
-
+						<!--
 						<plugin name="Adamant">
 							<description></description>
 							<conditionFlags>
@@ -348,7 +348,7 @@ The full verion of Heavy Armory with a few tweaks:
 								</dependencyType>
 							</typeDescriptor>
 						</plugin>
-
+						-->
 						<plugin name="Animated Armoury">
 							<description></description>
 							<conditionFlags>
@@ -389,7 +389,7 @@ The full verion of Heavy Armory with a few tweaks:
 							</typeDescriptor>
 						</plugin>
 
-						<plugin name="Immersive Dayspring Pass patch">
+						<plugin name="Immersive Dayspring Pass">
 							<description></description>
 							<conditionFlags>
 								<flag name="idp">On</flag>
