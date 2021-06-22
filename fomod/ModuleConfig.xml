@@ -429,7 +429,7 @@ The full verion of Heavy Armory with a few tweaks:
 							</typeDescriptor>
 						</plugin>
 
-						<plugin name="Skyrim Spear Mechanic">
+						<plugin name="Skyrim Spear Mechanics">
 							<description></description>
 							<conditionFlags>
 								<flag name="ssm">On</flag>
