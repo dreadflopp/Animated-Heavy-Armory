@@ -1,4 +1,4 @@
-﻿<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/dreadflopp/fomod-schema/blob/master/ModuleConfig.xsd">
+﻿<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
 	<moduleName>Animated Heavy Armory - DAR version</moduleName>
 	<installSteps order="Explicit">
 
@@ -35,9 +35,7 @@ This installer will guide you through the installation of:
 
 							</conditionFlags>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>									
-								</dependencyType>								
+								<type name="Recommended"/>								
 							</typeDescriptor>
 						</plugin>
 					</plugins>
@@ -72,9 +70,7 @@ The lite verion of Heavy Armory with a few tweaks:
 								<folder source="000 Heavy Armory Meshes" destination="" />
 							</files>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>									
-								</dependencyType>
+								<type name="Recommended"/>
 							</typeDescriptor>
 						</plugin>
 
@@ -96,19 +92,14 @@ The full verion of Heavy Armory with a few tweaks:
 								<folder source="000 Heavy Armory Meshes" destination="" />
 							</files>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									
-								</dependencyType>
+								<type name="Optional"/>
 							</typeDescriptor>
 						</plugin>
 
 						<plugin name="None">
 							<description>Do not install Heavy Armory.</description>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>									
-								</dependencyType>
+								<type name="Optional"/>
 							</typeDescriptor>
 						</plugin>
 
@@ -129,6 +120,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<plugins order="Explicit">
 
 						<plugin name="Animations for Quarterstaffs">
+							<description></description>
 							<files>
 								<folder source="010 Animations for Quarterstaffs" destination=""  />
 							</files>
@@ -149,24 +141,22 @@ The full verion of Heavy Armory with a few tweaks:
 						</plugin>
 
 						<plugin name="Animations for Shortspears">
+							<description></description>
 							<files>
 								<folder source="011 Animations for Shortspears" destination=""  />
 							</files>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-								</dependencyType>
+								<type name="Recommended"/>
 							</typeDescriptor>
 						</plugin>
 
 						<plugin name="Animations for Spears and Tridents">
+							<description></description>
 							<files>
 								<folder source="012 Animations for Spears and Tridents" destination=""  />
 							</files>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-								</dependencyType>
+								<type name="Recommended"/>
 							</typeDescriptor>
 						</plugin>
 
@@ -202,6 +192,7 @@ The full verion of Heavy Armory with a few tweaks:
 						</plugin>
 
 						<plugin name="Do not install balance tweaks">
+							<description></description>
 							<conditionFlags>
 								<flag name="balance">Off</flag>
 							</conditionFlags>
@@ -277,18 +268,15 @@ The full verion of Heavy Armory with a few tweaks:
 								<folder source="060 Vanilla Perk Descriptions" destination="" />
 							</files>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-								</dependencyType>
+								<type name="Recommended"/>
 							</typeDescriptor>
 						</plugin>
 
 
 						<plugin name="Do not install perk descriptions">
+							<description></description>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-								</dependencyType>
+								<type name="Optional"/>
 							</typeDescriptor>
 						</plugin>
 
@@ -324,10 +312,9 @@ The full verion of Heavy Armory with a few tweaks:
 						</plugin>
 
 						<plugin name="No">
+							<description></description>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-								</dependencyType>
+								<type name="Recommended"/>
 							</typeDescriptor>
 						</plugin>
 
@@ -343,6 +330,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<plugins order="Explicit">
 
 						<plugin name="Adamant">
+							<description></description>
 							<conditionFlags>
 								<flag name="adamant">On</flag>
 							</conditionFlags>
@@ -362,6 +350,7 @@ The full verion of Heavy Armory with a few tweaks:
 						</plugin>
 
 						<plugin name="Animated Armoury">
+							<description></description>
 							<conditionFlags>
 								<flag name="aa">On</flag>
 							</conditionFlags>
@@ -381,6 +370,7 @@ The full verion of Heavy Armory with a few tweaks:
 						</plugin>
 
 						<plugin name="Dawnguard Arsenal">
+							<description></description>
 							<conditionFlags>
 								<flag name="da">On</flag>
 							</conditionFlags>
@@ -400,6 +390,7 @@ The full verion of Heavy Armory with a few tweaks:
 						</plugin>
 
 						<plugin name="Immersive Dayspring Pass patch">
+							<description></description>
 							<conditionFlags>
 								<flag name="idp">On</flag>
 							</conditionFlags>
@@ -419,6 +410,7 @@ The full verion of Heavy Armory with a few tweaks:
 						</plugin>
 
 						<plugin name="Mysticism">
+							<description></description>
 							<conditionFlags>
 								<flag name="mysticism">On</flag>
 							</conditionFlags>
@@ -438,6 +430,7 @@ The full verion of Heavy Armory with a few tweaks:
 						</plugin>
 
 						<plugin name="Skyrim Spear Mechanic">
+							<description></description>
 							<conditionFlags>
 								<flag name="ssm">On</flag>
 							</conditionFlags>
@@ -457,8 +450,7 @@ The full verion of Heavy Armory with a few tweaks:
 						</plugin>
 
 						<plugin name="Unoffical Skyrim Special Edition patch">
-							<description>
-							</description>
+							<description></description>
 							<conditionFlags>
 								<flag name="ussep">On</flag>
 							</conditionFlags>
@@ -536,10 +528,9 @@ The full verion of Heavy Armory with a few tweaks:
 						</plugin>						
 
 						<plugin name="None">
+							<description></description>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-								</dependencyType>
+								<type name="Recommended"/>
 							</typeDescriptor>
 						</plugin>
 
@@ -559,7 +550,8 @@ The full verion of Heavy Armory with a few tweaks:
 				<group name="Do you use Ars Metallica?" type="SelectExactlyOne">
 					<plugins order="Explicit">
 
-					<plugin name="Yes">
+						<plugin name="Yes">
+							<description></description>
 							<conditionFlags>
 								<flag name="am">On</flag>
 							</conditionFlags>
@@ -579,10 +571,9 @@ The full verion of Heavy Armory with a few tweaks:
 						</plugin>
 
 						<plugin name="No">
+							<description></description>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-								</dependencyType>
+								<type name="Recommended"/>
 							</typeDescriptor>
 						</plugin>
 
@@ -605,9 +596,7 @@ The full verion of Heavy Armory with a few tweaks:
 						<plugin name="No">
 						<description>Ars Metallica patches will not be installed since you have selected Complete Crafting Overhaul Remastered, which is incompatible with Ars Metallica.</description>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-								</dependencyType>
+								<type name="Recommended"/>
 							</typeDescriptor>
 						</plugin>
 
@@ -634,18 +623,14 @@ The full verion of Heavy Armory with a few tweaks:
 								<folder source="090 Javelin disabler" destination="" />
 							</files>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-								</dependencyType>
+								<type name="Optional"/>
 							</typeDescriptor>
 						</plugin>
 
 						<plugin name="Do not install Javelin disabler">
 							<description>The Javelin disabler will disable all crafting recipes for the javelins from Skyrim Spear Mechanic.</description>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-								</dependencyType>
+								<type name="Recommended"/>
 							</typeDescriptor>
 						</plugin>
 
@@ -666,18 +651,14 @@ The full verion of Heavy Armory with a few tweaks:
 								<flag name="lvl">On</flag>
 							</conditionFlags>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-								</dependencyType>
+								<type name="Recommended"/>
 							</typeDescriptor>
 						</plugin>
 
 						<plugin name="No">
 							<description>Selecting yes will install patches that resolves conflicts in the leveled lists. Installing these patches are not nescessary if you are using a Bashed Patch.</description>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-								</dependencyType>
+								<type name="Optional"/>
 							</typeDescriptor>
 						</plugin>						
 
@@ -701,9 +682,7 @@ The full verion of Heavy Armory with a few tweaks:
 						<plugin name="Ok">
 						<description>Install the Ars Metallica patch from Dawnguard Arsenals nexus page to get breakdown recipes for Dawnguard Arsenal.</description>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-								</dependencyType>
+								<type name="Recommended"/>
 							</typeDescriptor>
 						</plugin>
 
@@ -727,9 +706,7 @@ The full verion of Heavy Armory with a few tweaks:
 						<plugin name="Ok">
 						<description>Install the Ars Metallica / Weapons Armor Clothing Clutter fixes patch from Kryptopyr's patch hub on the nexus.</description>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-								</dependencyType>
+								<type name="Recommended"/>
 							</typeDescriptor>
 						</plugin>
 
