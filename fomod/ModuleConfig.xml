@@ -782,7 +782,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="idp" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="051 AA - ImmersiveDayspringPass patch" destination="" />
+					<folder source="301 AA - ImmersiveDayspringPass patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -791,7 +791,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="idp" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="053 DawnguardArsenal - ImmersiveDayspringPass patch" destination="" />
+					<folder source="303 DawnguardArsenal - ImmersiveDayspringPass patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -800,7 +800,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ussep" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="052 AA - USSEP patch" destination="" />
+					<folder source="302 AA - USSEP patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -810,7 +810,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="balance" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="050 AA Fixes" destination="" />
+					<folder source="300 AA Fixes" destination="" />
 				</files>
 			</pattern>
 
@@ -1008,7 +1008,6 @@ The full verion of Heavy Armory with a few tweaks:
 					<folder source="048 ArsMetallica-HAFull-AA-SSM" destination="" />
 				</files>
 			</pattern>
-
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="aa" value="On"/>
@@ -1019,6 +1018,18 @@ The full verion of Heavy Armory with a few tweaks:
 				</dependencies>
 				<files>
 					<folder source="049 ArsMetallica-AA-SSM" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="am" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="050 ArsMetallica-SSM" destination="" />
 				</files>
 			</pattern>
 
