@@ -35,7 +35,7 @@ This installer will guide you through the installation of:
 
 							</conditionFlags>
 							<typeDescriptor>
-								<type name="Recommended"/>								
+								<type name="Recommended"/>
 							</typeDescriptor>
 						</plugin>
 					</plugins>
@@ -150,7 +150,7 @@ The full verion of Heavy Armory with a few tweaks:
 							</typeDescriptor>
 						</plugin>
 
-						<plugin name="Animations for Spears and Tridents">
+						<plugin name="Animations for Half Pikes and Tridents">
 							<description></description>
 							<files>
 								<folder source="012 Animations for Spears and Tridents" destination=""  />
@@ -400,7 +400,7 @@ The full verion of Heavy Armory with a few tweaks:
 									<patterns>
 										<pattern>
 											<dependencies operator="And">
-												<fileDependency file="AHZBetterDGEntranceSE.esp" state="Active"/>												
+												<fileDependency file="AHZBetterDGEntranceSE.esp" state="Active"/>
 											</dependencies>
 											<type name="Recommended"/>
 										</pattern>
@@ -525,7 +525,7 @@ The full verion of Heavy Armory with a few tweaks:
 									</patterns>
 								</dependencyType>
 							</typeDescriptor>
-						</plugin>						
+						</plugin>
 
 						<plugin name="None">
 							<description></description>
@@ -535,10 +535,10 @@ The full verion of Heavy Armory with a few tweaks:
 						</plugin>
 
 					</plugins>
-				</group>				
+				</group>
 			</optionalFileGroups>
 		</installStep>
-		
+
 		<!-- Ars Metallica -->
 		<installStep name="Ars Metallica">
 			<visible>
@@ -660,7 +660,7 @@ The full verion of Heavy Armory with a few tweaks:
 							<typeDescriptor>
 								<type name="Optional"/>
 							</typeDescriptor>
-						</plugin>						
+						</plugin>
 
 					</plugins>
 				</group>
@@ -715,7 +715,7 @@ The full verion of Heavy Armory with a few tweaks:
 
 			</optionalFileGroups>
 		</installStep>
-		
+
 	</installSteps>
 
 	<!-- ****************************** -->
@@ -843,7 +843,7 @@ The full verion of Heavy Armory with a few tweaks:
 				<files>
 					<folder source="034 HALite-WACCF" destination="" />
 				</files>
-			</pattern>			
+			</pattern>
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="waccf" value="On"/>
@@ -1019,8 +1019,8 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="Off"/>	
-					<flagDependency flag="hllr" value="Off"/>				
+					<flagDependency flag="ccor" value="Off"/>
+					<flagDependency flag="hllr" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="076 AA-SSM-Blacksmith Lvl list patch" destination="" />
@@ -1034,8 +1034,8 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="Off"/>	
-					<flagDependency flag="hllr" value="Off"/>				
+					<flagDependency flag="ccor" value="Off"/>
+					<flagDependency flag="hllr" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="070 HAFull-AA-Blacksmith Lvl list patch" destination="" />
@@ -1049,8 +1049,8 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="Off"/>	
-					<flagDependency flag="hllr" value="Off"/>				
+					<flagDependency flag="ccor" value="Off"/>
+					<flagDependency flag="hllr" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="071 HAFull-AA-SSM-Blacksmith Lvl list patch" destination="" />
@@ -1064,8 +1064,8 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="Off"/>	
-					<flagDependency flag="hllr" value="Off"/>				
+					<flagDependency flag="ccor" value="Off"/>
+					<flagDependency flag="hllr" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="072 HAFull-SSM-Blacksmith Lvl list patch" destination="" />
@@ -1079,8 +1079,8 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ha-lite" value="On"/>
 					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="Off"/>	
-					<flagDependency flag="hllr" value="Off"/>				
+					<flagDependency flag="ccor" value="Off"/>
+					<flagDependency flag="hllr" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="073 HALite-AA-Blacksmith Lvl list patch" destination="" />
@@ -1094,8 +1094,8 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ha-lite" value="On"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="Off"/>	
-					<flagDependency flag="hllr" value="Off"/>				
+					<flagDependency flag="ccor" value="Off"/>
+					<flagDependency flag="hllr" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="074 HALite-AA-SPM-Blacksimth Lvl list patch" destination="" />
@@ -1109,8 +1109,8 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ha-lite" value="On"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="Off"/>		
-					<flagDependency flag="hllr" value="Off"/>			
+					<flagDependency flag="ccor" value="Off"/>
+					<flagDependency flag="hllr" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="075 HALite-SSM-Blacksmith Lvl list patch" destination="" />
@@ -1126,7 +1126,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="On"/>					
+					<flagDependency flag="ccor" value="On"/>
 				</dependencies>
 				<files>
 					<folder source="086 AA-SSM-Blacksmith-CCOR Lvl list patch" destination="" />
@@ -1140,7 +1140,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="On"/>					
+					<flagDependency flag="ccor" value="On"/>
 				</dependencies>
 				<files>
 					<folder source="080 HAFull-AA-Blacksmith-CCOR Lvl list patch" destination="" />
@@ -1154,7 +1154,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="On"/>					
+					<flagDependency flag="ccor" value="On"/>
 				</dependencies>
 				<files>
 					<folder source="081 HAFull-AA-SSM-Blacksmith-CCOR Lvl list patch" destination="" />
@@ -1168,7 +1168,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="On"/>					
+					<flagDependency flag="ccor" value="On"/>
 				</dependencies>
 				<files>
 					<folder source="082 HAFull-SSM-Blacksmith-CCOR Lvl list patch" destination="" />
@@ -1182,7 +1182,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ha-lite" value="On"/>
 					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="On"/>					
+					<flagDependency flag="ccor" value="On"/>
 				</dependencies>
 				<files>
 					<folder source="083  HALite-AA-Blacksmith-CCOR Lvl list patch" destination="" />
@@ -1196,7 +1196,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ha-lite" value="On"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="On"/>					
+					<flagDependency flag="ccor" value="On"/>
 				</dependencies>
 				<files>
 					<folder source="084 HALite-AA-SPM-Blacksmith-CCOR Lvl list patch" destination="" />
@@ -1210,7 +1210,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ha-lite" value="On"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="On"/>					
+					<flagDependency flag="ccor" value="On"/>
 				</dependencies>
 				<files>
 					<folder source="085 HALite-SSM-Blacksmith-CCOR Lvl list patch" destination="" />
@@ -1223,7 +1223,7 @@ The full verion of Heavy Armory with a few tweaks:
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="mysticism" value="On"/>
-					<flagDependency flag="aa" value="On"/>					
+					<flagDependency flag="aa" value="On"/>
 				</dependencies>
 				<files>
 					<folder source="101 Mysticism-AA Lvl list patch" destination="" />
@@ -1519,7 +1519,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<folder source="207 DawnguardArsenal-HALite-AA-DawnguardWeapons_lvllist-patch" destination="" />
 				</files>
 			</pattern>
-			
+
 		</patterns>
 	</conditionalFileInstalls>
 </config>
