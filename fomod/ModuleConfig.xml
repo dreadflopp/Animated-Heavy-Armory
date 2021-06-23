@@ -44,7 +44,7 @@ This installer will guide you through the installation of:
 		</installStep>
 
 		<!-- Heavy Armory version -->
-		<installStep name="Heavy Armory">
+		<installStep name="Heavy Armory version selection">
 			<optionalFileGroups order="Explicit">
 				<group name="Heavy Armory version" type="SelectExactlyOne">
 					<plugins order="Explicit">
@@ -109,14 +109,14 @@ The full verion of Heavy Armory with a few tweaks:
 		</installStep>
 
 		<!-- Animations -->
-		<installStep name="Animations">
+		<installStep name="Animations selection">
 			<visible>
 				<dependencies operator="And">
 					<flagDependency flag="ha" value="On"/>
 				</dependencies>
 			</visible>
 			<optionalFileGroups order="Explicit">
-				<group name="Select animations" type="SelectAny">
+				<group name="Animations" type="SelectAny">
 					<plugins order="Explicit">
 
 						<plugin name="Animations for Quarterstaffs">
@@ -155,164 +155,6 @@ The full verion of Heavy Armory with a few tweaks:
 							<files>
 								<folder source="012 Animations for Spears and Tridents" destination=""  />
 							</files>
-							<typeDescriptor>
-								<type name="Recommended"/>
-							</typeDescriptor>
-						</plugin>
-
-					</plugins>
-				</group>
-			</optionalFileGroups>
-		</installStep>
-
-		<!-- Balance tweaks -->
-		<installStep name="Balance Tweaks Installation">
-			<optionalFileGroups order="Explicit">
-				<group name="Balance Tweaks" type="SelectExactlyOne">
-					<plugins order="Explicit">
-
-						<plugin name="Install balance tweaks">
-							<description>This will install balancing tweaks for Heavy Armory, Skyrim Spear Mechanic and/or Animated Armoury. Note that these balancing tweaks are not compatible with Weapons Armors Clothing Clutter Fixes. Selecting this will hide WACCF options in the installer.</description>
-							<conditionFlags>
-								<flag name="balance">On</flag>
-							</conditionFlags>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="Weapons Armor Clothing &amp; Clutter Fixes.esp" state="Active"/>
-											</dependencies>
-											<type name="Optional"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-						<plugin name="Do not install balance tweaks">
-							<description></description>
-							<conditionFlags>
-								<flag name="balance">Off</flag>
-							</conditionFlags>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="Weapons Armor Clothing &amp; Clutter Fixes.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-					</plugins>
-				</group>
-			</optionalFileGroups>
-		</installStep>
-
-		<!-- Perk Descriptions -->
-		<installStep name="Perk Descriptions Installation">
-			<optionalFileGroups order="Explicit">
-				<group name="Perks Desciptions" type="SelectExactlyOne">
-					<plugins order="Explicit">
-
-						<plugin name="Install perk descriptions for WACCF">
-							<description>This will patch the perk descriptions for WACCF users. The naming of weapon types in the perk descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
-							<files>
-								<folder source="061 WACCF Perk Descriptions" destination="" />
-							</files>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="Weapons Armor Clothing &amp; Clutter Fixes.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-						<plugin name="Install perk descriptions for Adamant">
-							<description>This will patch the perk descriptions for Adamant users. The naming of weapon types in the perk descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
-							<files>
-								<folder source="062 Adamant Perk Descriptions" destination="" />
-							</files>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="Adamant.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-						<plugin name="Install perk descriptions for vanilla">
-							<description>This will patch the perk descriptions for vanilla users. The naming of weapon types in the perk descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
-							<files>
-								<folder source="060 Vanilla Perk Descriptions" destination="" />
-							</files>
-							<typeDescriptor>
-								<type name="Recommended"/>
-							</typeDescriptor>
-						</plugin>
-
-
-						<plugin name="Do not install perk descriptions">
-							<description></description>
-							<typeDescriptor>
-								<type name="Optional"/>
-							</typeDescriptor>
-						</plugin>
-
-					</plugins>
-				</group>
-			</optionalFileGroups>
-		</installStep>
-
-		<!-- HLLR -->
-		<installStep name="High-Level Loot Rarified">
-			<optionalFileGroups order="Explicit">
-				<group name="Do you use HLLR?" type="SelectExactlyOne">
-					<plugins order="Explicit">
-
-						<plugin name="Yes">
-							<description>Selectt yes if you use High-Level Loot Rarified (HLLR). Selecting yes will hide incompatible options (WACCF and CCOR) from the installer and will skip some patches in favor of those provided by HLLR.</description>
-							<conditionFlags>
-								<flag name="hllr">On</flag>
-							</conditionFlags>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="High-level Loot Rarified.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
-						<plugin name="No">
-							<description></description>
 							<typeDescriptor>
 								<type name="Recommended"/>
 							</typeDescriptor>
@@ -429,7 +271,7 @@ The full verion of Heavy Armory with a few tweaks:
 							</typeDescriptor>
 						</plugin>
 
-						<plugin name="Skyrim Spear Mechanics">
+						<plugin name="Skyrim Spear Mechanic">
 							<description></description>
 							<conditionFlags>
 								<flag name="ssm">On</flag>
@@ -469,46 +311,8 @@ The full verion of Heavy Armory with a few tweaks:
 							</typeDescriptor>
 						</plugin>
 
-					</plugins>
-				</group>
-			</optionalFileGroups>
-		</installStep>
-
-		<!-- WACCF + CCOR -->
-		<installStep name="Mod selection">
-			<visible>
-				<dependencies operator="And">
-					<flagDependency flag="balance" value="Off"/>
-					<flagDependency flag="hllr" value="Off"/>
-				</dependencies>
-			</visible>
-			<optionalFileGroups order="Explicit">
-				<group name="WACCF / CCOR" type="SelectExactlyOne">
-					<plugins order="Explicit">
-
-						<plugin name="WACCF + CCOR">
-							<description>Choose this if you use Weapons Armor Clothing and Clutter Fixes and Complete Crafting Overhaul Remastered.</description>
-							<conditionFlags>
-								<flag name="waccf">On</flag>
-								<flag name="ccor">On</flag>
-							</conditionFlags>
-							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="Complete Crafting Overhaul_Remastered.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
-							</typeDescriptor>
-						</plugin>
-
 						<plugin name="WACCF">
-							<description>Choose this if you use Weapons Armor Clothing and Clutter Fixes without Complete Crafting Overhaul Remastered.</description>
+							<description>Choose this if you use Weapons Armor Clothing and Clutter Fixes.</description>
 							<conditionFlags>
 								<flag name="waccf">On</flag>
 							</conditionFlags>
@@ -527,30 +331,13 @@ The full verion of Heavy Armory with a few tweaks:
 							</typeDescriptor>
 						</plugin>
 
-						<plugin name="None">
-							<description></description>
-							<typeDescriptor>
-								<type name="Recommended"/>
-							</typeDescriptor>
-						</plugin>
-
 					</plugins>
 				</group>
-			</optionalFileGroups>
-		</installStep>
 
-		<!-- Ars Metallica -->
-		<installStep name="Ars Metallica">
-			<visible>
-				<dependencies operator="And">
-					<flagDependency flag="ccor" value="Off"/>
-				</dependencies>
-			</visible>
-			<optionalFileGroups order="Explicit">
-				<group name="Do you use Ars Metallica?" type="SelectExactlyOne">
+				<group name="Crafting mod" type="SelectExactlyOne">
 					<plugins order="Explicit">
 
-						<plugin name="Yes">
+						<plugin name="Ars Metallica">
 							<description></description>
 							<conditionFlags>
 								<flag name="am">On</flag>
@@ -570,7 +357,28 @@ The full verion of Heavy Armory with a few tweaks:
 							</typeDescriptor>
 						</plugin>
 
-						<plugin name="No">
+						<plugin name="Complete Crafting Overhaul_Remastered">
+							<description>Choose this if you use Complete Crafting Overhaul Remastered (CCOR). Note that Weapons Armor Clothing and Clutter Fixes (WACCF) is a mster to CCOR. This means that selecting CCOR will overwrite your selection of WACCF above and install WACCF patches as well.</description>
+							<conditionFlags>
+								<flag name="waccf">On</flag>
+								<flag name="ccor">On</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="Complete Crafting Overhaul_Remastered.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>						
+
+						<plugin name="None">
 							<description></description>
 							<typeDescriptor>
 								<type name="Recommended"/>
@@ -579,22 +387,148 @@ The full verion of Heavy Armory with a few tweaks:
 
 					</plugins>
 				</group>
-
 			</optionalFileGroups>
 		</installStep>
 
-		<installStep name="Ars Metallica">
+		<!-- Perk Descriptions -->
+		<installStep name="Perk Descriptions Installation">
+			<optionalFileGroups order="Explicit">
+				<group name="Perks Desciptions" type="SelectExactlyOne">
+					<plugins order="Explicit">						
+
+						<plugin name="Install perk descriptions for Adamant">
+							<description>This will patch the perk descriptions for Adamant users. The naming of weapon types in the perk descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
+							<files>
+								<folder source="062 Adamant Perk Descriptions" destination="" />
+							</files>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="Adamant.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+
+						<plugin name="Install perk descriptions for WACCF">
+							<description>This will patch the perk descriptions for WACCF users. The naming of weapon types in the perk descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
+							<files>
+								<folder source="061 WACCF Perk Descriptions" destination="" />
+							</files>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="Weapons Armor Clothing &amp; Clutter Fixes.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="Install perk descriptions for vanilla">
+							<description>This will patch the perk descriptions for vanilla users. The naming of weapon types in the perk descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
+							<files>
+								<folder source="060 Vanilla Perk Descriptions" destination="" />
+							</files>
+							<typeDescriptor>
+								<type name="Recommended"/>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="Do not install perk descriptions">
+							<description></description>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+
+		<!-- Balance tweaks -->
+		<installStep name="Tweaks">
 			<visible>
 				<dependencies operator="And">
-					<flagDependency flag="ccor" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 			</visible>
 			<optionalFileGroups order="Explicit">
-				<group name="Do you use Ars Metllica?" type="SelectExactlyOne">
+				<group name="Balance Tweaks" type="SelectExactlyOne">
 					<plugins order="Explicit">
 
-						<plugin name="No">
-						<description>Ars Metallica patches will not be installed since you have selected Complete Crafting Overhaul Remastered, which is incompatible with Ars Metallica.</description>
+						<plugin name="Install balance tweaks">
+							<description>This will install balancing tweaks for Heavy Armory, Skyrim Spear Mechanic and/or Animated Armoury. Note that these balancing tweaks are not compatible with Weapons Armors Clothing Clutter Fixes. Selecting this will hide WACCF options in the installer.</description>
+							<conditionFlags>
+								<flag name="balance">On</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Recommended"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="Weapons Armor Clothing &amp; Clutter Fixes.esp" state="Active"/>
+											</dependencies>
+											<type name="Optional"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="Do not install balance tweaks">
+							<description></description>
+							<conditionFlags>
+								<flag name="balance">Off</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="Weapons Armor Clothing &amp; Clutter Fixes.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+		<installStep name="Tweaks">
+			<visible>
+				<dependencies operator="And">
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+			</visible>
+			<optionalFileGroups order="Explicit">
+				<group name="Balance Tweaks" type="SelectExactlyOne">
+					<plugins order="Explicit">
+
+						<plugin name="Do not install balance tweaks">
+							<description>The balancing tweaks are not compatible with Weapons Armors Clothing and Clutter Fixes.</description>
+							<conditionFlags>
+								<flag name="balance">Off</flag>
+							</conditionFlags>
 							<typeDescriptor>
 								<type name="Recommended"/>
 							</typeDescriptor>
@@ -602,12 +536,11 @@ The full verion of Heavy Armory with a few tweaks:
 
 					</plugins>
 				</group>
-
 			</optionalFileGroups>
 		</installStep>
 
 		<!-- Javelin disabler -->
-		<installStep name="Skyrim Spear Mechanic">
+		<installStep name="Tweaks page 2">
 			<visible>
 				<dependencies operator="And">
 					<flagDependency flag="ssm" value="On"/>
@@ -629,6 +562,70 @@ The full verion of Heavy Armory with a few tweaks:
 
 						<plugin name="Do not install Javelin disabler">
 							<description>The Javelin disabler will disable all crafting recipes for the javelins from Skyrim Spear Mechanic.</description>
+							<typeDescriptor>
+								<type name="Recommended"/>
+							</typeDescriptor>
+						</plugin>
+
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+		
+		<!-- HLLR -->
+		<installStep name="High-Level Loot Rarified selection">
+			<visible>
+				<dependencies operator="And">
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+			</visible>
+			<optionalFileGroups order="Explicit">
+				<group name="High-Level Loot Rarified" type="SelectExactlyOne">
+					<plugins order="Explicit">
+
+						<plugin name="Yes">
+							<description>Select yes if you use High-Level Loot Rarified (HLLR). Selecting yes will skip some patches in favor of those provided by HLLR.</description>
+							<conditionFlags>
+								<flag name="hllr">On</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="High-level Loot Rarified.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="No">
+							<description>Select yes if you use High-Level Loot Rarified (HLLR). Selecting yes will skip some patches in favor of those provided by HLLR.</description>
+							<typeDescriptor>
+								<type name="Recommended"/>
+							</typeDescriptor>
+						</plugin>
+
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+		<installStep name="High-Level Loot Rarified selection">
+			<visible>
+				<dependencies operator="And">
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+			</visible>
+			<optionalFileGroups order="Explicit">
+				<group name="High-Level Loot Rarified" type="SelectExactlyOne">
+					<plugins order="Explicit">
+
+						<plugin name="No">
+							<description>High-Level Loot Rarified is not compatible with Weapons Armor Clothing and Clutter fixes and patches for it will not be installed.</description>
 							<typeDescriptor>
 								<type name="Recommended"/>
 							</typeDescriptor>
@@ -704,7 +701,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<plugins order="Explicit">
 
 						<plugin name="Ok">
-						<description>Install the Ars Metallica / Weapons Armor Clothing Clutter fixes patch from Kryptopyr's patch hub on the nexus.</description>
+						<description>Install the Ars Metallica + WACCF / CCOR patch from Kryptopyr's patch hub on the nexus.</description>
 							<typeDescriptor>
 								<type name="Recommended"/>
 							</typeDescriptor>
