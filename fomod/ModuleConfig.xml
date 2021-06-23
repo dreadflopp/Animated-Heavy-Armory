@@ -15,7 +15,7 @@ This installer will guide you through the installation of:
 
 - Animations for Heavy Armory (each animation is optional)
 
-- Patches
+- Patches and tweaks
 							</description>
 							<conditionFlags>
 								<flag name="ha-lite">Off</flag>
@@ -357,7 +357,7 @@ The full verion of Heavy Armory with a few tweaks:
 							</typeDescriptor>
 						</plugin>
 
-						<plugin name="Complete Crafting Overhaul_Remastered">
+						<plugin name="Complete Crafting Overhaul Remastered">
 							<description>Choose this if you use Complete Crafting Overhaul Remastered (CCOR). Note that Weapons Armor Clothing and Clutter Fixes (WACCF) is a mster to CCOR. This means that selecting CCOR will overwrite your selection of WACCF above and install WACCF patches as well.</description>
 							<conditionFlags>
 								<flag name="waccf">On</flag>
@@ -639,7 +639,7 @@ The full verion of Heavy Armory with a few tweaks:
 		<!-- Leveled lists patches -->
 		<installStep name="Level List Patches">
 			<optionalFileGroups order="Explicit">
-				<group name="Do you want to install level list patches?" type="SelectAny">
+				<group name="Do you want to install level list patches?" type="SelectExactlyOne">
 					<plugins order="Explicit">
 
 						<plugin name="Yes">
