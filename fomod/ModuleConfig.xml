@@ -396,7 +396,7 @@ The full verion of Heavy Armory with a few tweaks:
 				<group name="Perks Desciptions" type="SelectExactlyOne">
 					<plugins order="Explicit">						
 
-						<plugin name="Install perk descriptions for Adamant">
+						<plugin name="Install perk descriptions for Adamant - A Perk Overhaul">
 							<description>This will patch the perk descriptions for Adamant users. The naming of weapon types in the perk descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
 							<files>
 								<folder source="062 Adamant Perk Descriptions" destination="" />
@@ -416,6 +416,45 @@ The full verion of Heavy Armory with a few tweaks:
 							</typeDescriptor>
 						</plugin>
 
+						<plugin name="Install perk descriptions for Vokrii - Minimalistic Perks of Skyrim">
+							<description>This will patch the perk descriptions for Vokrii users. The naming of weapon types in the perk descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
+							<files>
+								<folder source="063 Vokrii-Perk Descriptions" destination="" />
+							</files>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="Vokrii - Minimalistic Perks of Skyrim" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="Install perk descriptions for Ordinator - Perks of Skyrim">
+							<description>This will patch the perk descriptions for Ordinator users. The naming of weapon types in the perk descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
+							<files>
+								<folder source="064 Ordinator-Perk Descriptions" destination="" />
+							</files>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional"/>
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="Ordinator - Perks of Skyrim.esp" state="Active"/>
+											</dependencies>
+											<type name="Recommended"/>
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
 
 						<plugin name="Install perk descriptions for WACCF">
 							<description>This will patch the perk descriptions for WACCF users. The naming of weapon types in the perk descriptions will be more generic or add in weapon types from Animated Armoury and Heavy Armory.</description>
