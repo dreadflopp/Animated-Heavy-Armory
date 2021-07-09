@@ -899,6 +899,15 @@ The full verion of Heavy Armory with a few tweaks:
 					<folder source="036 SSM-CCOR" destination="" />
 				</files>
 			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="waccf" value="Off"/>
+					<flagDependency flag="aa" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="037 AA-LvllistFix" destination="" />
+				</files>
+			</pattern>
 
 			<!-- ars metallica -->
 			<pattern>
@@ -1150,6 +1159,20 @@ The full verion of Heavy Armory with a few tweaks:
 				</dependencies>
 				<files>
 					<folder source="075 HALite-SSM-Blacksmith Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="Off"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="Off"/>
+					<flagDependency flag="am" value="Off"/>
+					<flagDependency flag="ccor" value="Off"/>
+					<flagDependency flag="hllr" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="087 AA-Blacksmith patch" destination="" />
 				</files>
 			</pattern>
 
