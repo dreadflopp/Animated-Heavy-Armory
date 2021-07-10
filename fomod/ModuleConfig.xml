@@ -32,6 +32,7 @@ This installer will guide you through the installation of:
 								<flag name="am">Off</flag>
 								<flag name="adamant">Off</flag>
 								<flag name="lvl">Off</flag>
+								<flag name="ench">Off</flag>
 
 							</conditionFlags>
 							<typeDescriptor>
@@ -667,6 +668,34 @@ The full verion of Heavy Armory with a few tweaks:
 							<description>High-Level Loot Rarified is not compatible with Weapons Armor Clothing and Clutter fixes and patches for it will not be installed.</description>
 							<typeDescriptor>
 								<type name="Recommended"/>
+							</typeDescriptor>
+						</plugin>
+
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+
+		<!-- Enchanted versions -->
+		<installStep name="Enchanted versions">
+			<optionalFileGroups order="Explicit">
+				<group name="Do you want to install enchanted versions?" type="SelectExactlyOne">
+					<plugins order="Explicit">
+
+						<plugin name="Yes">
+							<description>Selecting yes will install enchanted versions of Heavy Armory, Animated Armoury and Skyrim Spear Mechanic, depending on previous choices of mods.</description>
+							<conditionFlags>
+								<flag name="ench">On</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<type name="Recommended"/>
+							</typeDescriptor>
+						</plugin>
+
+						<plugin name="No">
+							<description>Selecting yes will install enchanted versions of Heavy Armory, Animated Armoury and Skyrim Spear Mechanic, depending on previous choices of mods.</description>
+							<typeDescriptor>
+								<type name="Optional"/>
 							</typeDescriptor>
 						</plugin>
 
@@ -1588,6 +1617,466 @@ The full verion of Heavy Armory with a few tweaks:
 				</files>
 			</pattern>
 
+			<!-- Enchanted -->
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="400 AA-Enchanted" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="401 HALite-Enchanted" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="402 HAFull-Enchanted" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="403 SSM-Enchanted" destination="" />
+				</files>
+			</pattern>
+
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="hllr" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="410 AA-EnchantedHLLR" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="hllr" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="411 HALite-EnchantedHLLR" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="hllr" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="412 HAFull-EnchantedHLLR" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="413 SSM-EnchantedHLLR" destination="" />
+				</files>
+			</pattern>
+
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="420 AA-EnchantedWACCF" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="421 HALite-EnchantedWACCF" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="422 HAFull-EnchantedWACCF" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="423 SSM-EnchantedWACCF" destination="" />
+				</files>
+			</pattern>
+
+			<!-- Enchanted lvl list -->
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="Off"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="450 AA-HAFull-Ench Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="ssm" value="Off"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="451 AA-HALite-Ench Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="452 HALite-SSM-Ench Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="453 HAFull-SSM-Ench Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="Off"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="454 AA-SSM-Ench Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="455 AA-HALite-SSM-Ench Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="456 AA-HAFull-SSM-Ench Lvl list patch" destination="" />
+				</files>
+			</pattern>
+
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="Off"/>
+					<flagDependency flag="hllr" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="460 AA-HAFull-EnchHLLR Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="ssm" value="Off"/>
+					<flagDependency flag="hllr" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="461 AA-HALite-EnchHLLR Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="462 HALite-SSM-EnchHLLR Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="463 HAFull-SSM-EnchHLLR Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="Off"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="464 AA-SSM-EnchHLLR Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="465 AA-HALite-SSM-EnchHLLR Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="466 AA-HAFull-SSM-EnchHLLR Lvl list patch" destination="" />
+				</files>
+			</pattern>
+
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="Off"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="470 AA-HAFull-EnchWACCF Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="ssm" value="Off"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="471 AA-HALite-EnchWACCF Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="472 HALite-SSM-EnchWACCF Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="473 HAFull-SSM-EnchWACCF Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="Off"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="474 AA-SSM-EnchWACCF Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="475 AA-HALite-SSM-EnchWACCF Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ha-lite" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="476 AA-HAFull-SSM-EnchWACCF Lvl list patch" destination="" />
+				</files>
+			</pattern>
 		</patterns>
 	</conditionalFileInstalls>
 </config>
