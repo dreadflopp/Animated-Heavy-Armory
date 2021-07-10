@@ -893,6 +893,15 @@ The full verion of Heavy Armory with a few tweaks:
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="035 SSM-WACCF" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="ccor" value="On"/>
 				</dependencies>
 				<files>
