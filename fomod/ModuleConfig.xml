@@ -863,7 +863,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="ha" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="032 HAFull-WACCF" destination="" />
+					<folder source="032 HA-WACCF" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -873,7 +873,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="ha" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="033 HAFull-WACCF-CCOR" destination="" />
+					<folder source="033 HA-WACCF-CCOR" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -914,7 +914,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="hllr" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="041 ArsMetallica-HAFull" destination="" />
+					<folder source="041 ArsMetallica-HA" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -926,7 +926,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="hllr" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="043 ArsMetallica-HAFull-AA" destination="" />
+					<folder source="043 ArsMetallica-HA-AA" destination="" />
 				</files>
 			</pattern>
 
@@ -952,7 +952,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="hllr" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="047 ArsMetallica-HAFull-SSM" destination="" />
+					<folder source="047 ArsMetallica-HA-SSM" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -964,7 +964,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="hllr" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="048 ArsMetallica-HAFull-AA-SSM" destination="" />
+					<folder source="048 ArsMetallica-HA-AA-SSM" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1018,7 +1018,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="hllr" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="070 HAFull-AA-Blacksmith Lvl list patch" destination="" />
+					<folder source="070 HA-AA-Blacksmith Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1032,7 +1032,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="hllr" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="071 HAFull-AA-SSM-Blacksmith Lvl list patch" destination="" />
+					<folder source="071 HA-AA-SSM-Blacksmith Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1046,7 +1046,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="hllr" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="072 HAFull-SSM-Blacksmith Lvl list patch" destination="" />
+					<folder source="072 HA-SSM-Blacksmith Lvl list patch" destination="" />
 				</files>
 			</pattern>			
 			<pattern>
@@ -1088,7 +1088,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="ccor" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="080 HAFull-AA-Blacksmith-CCOR Lvl list patch" destination="" />
+					<folder source="080 HA-AA-Blacksmith-CCOR Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1101,7 +1101,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="ccor" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="081 HAFull-AA-SSM-Blacksmith-CCOR Lvl list patch" destination="" />
+					<folder source="081 HA-AA-SSM-Blacksmith-CCOR Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1114,7 +1114,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="ccor" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="082 HAFull-SSM-Blacksmith-CCOR Lvl list patch" destination="" />
+					<folder source="082 HA-SSM-Blacksmith-CCOR Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<!-- Level list patches -->
@@ -1140,7 +1140,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="hllr" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="120 HAFull-AA Lvl list patch" destination="" />
+					<folder source="120 HA-AA Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1153,7 +1153,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="ccor" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="121 HAFull-AA-WACCF Lvl list patch" destination="" />
+					<folder source="121 HA-AA-WACCF Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1166,7 +1166,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="ccor" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="122 HAFull-AA-WACCF-CCOR Lvl list patch" destination="" />
+					<folder source="122 HA-AA-WACCF-CCOR Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1180,7 +1180,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="hllr" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="123 HAFull-AA-SSM Lvl list patch" destination="" />
+					<folder source="123 HA-AA-SSM Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1193,7 +1193,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="ccor" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="124 HAFull-AA-SSM-WACCF Lvl list patch" destination="" />
+					<folder source="124 HA-AA-SSM-WACCF Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1206,7 +1206,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="ccor" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="125 HAFull-AA-SSM-WACCF-CCOR Lvl list patch" destination="" />
+					<folder source="125 HA-AA-SSM-WACCF-CCOR Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1218,7 +1218,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="hllr" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="126 HAFull-SSM Lvl list patch" destination="" />
+					<folder source="126 HA-SSM Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1253,7 +1253,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="aa" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="202 DawnguardArsenal-HAFull-DawnguardWeapons Lvl list patch" destination="" />
+					<folder source="202 DawnguardArsenal-HA-DawnguardWeapons Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1264,7 +1264,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="aa" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="204 HAFull-AA-DawnguardWeapons_lvllist-patch" destination="" />
+					<folder source="204 HA-AA-DawnguardWeapons_lvllist-patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1275,7 +1275,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="aa" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="206 DawnguardArsenal-HAFull-AA-DawnguardWeapons_lvllist-patch" destination="" />
+					<folder source="206 DawnguardArsenal-HA-AA-DawnguardWeapons_lvllist-patch" destination="" />
 				</files>
 			</pattern>
 
@@ -1299,7 +1299,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="402 HAFull-Enchanted" destination="" />
+					<folder source="402 HA-Enchanted" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1333,7 +1333,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="412 HAFull-EnchantedHLLR" destination="" />
+					<folder source="412 HA-EnchantedHLLR" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1368,7 +1368,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="422 HAFull-EnchantedWACCF" destination="" />
+					<folder source="422 HA-EnchantedWACCF" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1395,7 +1395,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="450 AA-HAFull-Ench Lvl list patch" destination="" />
+					<folder source="450 AA-HA-Ench Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1410,7 +1410,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="453 HAFull-SSM-Ench Lvl list patch" destination="" />
+					<folder source="453 HA-SSM-Ench Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1438,7 +1438,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="456 AA-HAFull-SSM-Ench Lvl list patch" destination="" />
+					<folder source="456 AA-HA-SSM-Ench Lvl list patch" destination="" />
 				</files>
 			</pattern>
 
@@ -1453,7 +1453,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="460 AA-HAFull-EnchHLLR Lvl list patch" destination="" />
+					<folder source="460 AA-HA-EnchHLLR Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1468,7 +1468,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="463 HAFull-SSM-EnchHLLR Lvl list patch" destination="" />
+					<folder source="463 HA-SSM-EnchHLLR Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1497,7 +1497,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="466 AA-HAFull-SSM-EnchHLLR Lvl list patch" destination="" />
+					<folder source="466 AA-HA-SSM-EnchHLLR Lvl list patch" destination="" />
 				</files>
 			</pattern>
 
@@ -1512,7 +1512,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="470 AA-HAFull-EnchWACCF Lvl list patch" destination="" />
+					<folder source="470 AA-HA-EnchWACCF Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1527,7 +1527,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="473 HAFull-SSM-EnchWACCF Lvl list patch" destination="" />
+					<folder source="473 HA-SSM-EnchWACCF Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1557,7 +1557,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="476 AA-HAFull-SSM-EnchWACCF Lvl list patch" destination="" />
+					<folder source="476 AA-HA-SSM-EnchWACCF Lvl list patch" destination="" />
 				</files>
 			</pattern>
 		</patterns>
