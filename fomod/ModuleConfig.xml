@@ -18,7 +18,6 @@ This installer will guide you through the installation of:
 - Patches and tweaks
 							</description>
 							<conditionFlags>
-								<flag name="ha-lite">Off</flag>
 								<flag name="ha">Off</flag>
 								<flag name="aa">Off</flag>
 								<flag name="da">Off</flag>
@@ -44,56 +43,36 @@ This installer will guide you through the installation of:
 			</optionalFileGroups>
 		</installStep>
 
-		<!-- Heavy Armory version -->
-		<installStep name="Heavy Armory version selection">
+		<!-- Heavy Armory  -->
+		<installStep name="Heavy Armory installer">
 			<optionalFileGroups order="Explicit">
-				<group name="Heavy Armory version" type="SelectExactlyOne">
+				<group name="Heavy Armory" type="SelectExactlyOne">
 					<plugins order="Explicit">
 
-						<plugin name="Heavy Armory - Lite (recommended)">
+						<plugin name="Heavy Armory (recommended)">
 							<description>
-The lite verion of Heavy Armory with a few tweaks:
+This is installs Heavy Armory with a few tweaks and bugfixes:
 
 - Halebards has been renamed to Poleaxes since they are quite short and to ensure compatibility with Animated Armoury's Halebards.
 
+- Quarterstaffs has been renamed to Short Staffs since they too are quite short and to differentiate them from the Quarterstaffs from Animated Armoury.
+
+- Spears has been renamed to Half Pikes to ensure compatibility with other mods that adds one handed spears or longer pikes.
+
 - Keywords added to allow custom animations to be binded to specific weapon types and to allow SkyUI Weapons pack to show its custom icons for the added weapons.
 
-- Changes from Unofficial Skyrim Special Edition added as well as a few other small fixes.
+- Changes from Unofficial Skyrim Special Edition added as well as a few other fixes.
 
-- Quarterstaffs and Tridents has been removed since they have no fitting animations. They are too short for the animations from Animated Armoury to work well.
 							</description>
 							<conditionFlags>
-								<flag name="ha-lite">On</flag>
 								<flag name="ha">On</flag>
 							</conditionFlags>
 							<files>
-								<folder source="002 Heavy Armory - lite plugin" destination=""  />
+								<folder source="001 Heavy Armory - Plugin" destination=""  />
 								<folder source="000 Heavy Armory Meshes" destination="" />
 							</files>
 							<typeDescriptor>
 								<type name="Recommended"/>
-							</typeDescriptor>
-						</plugin>
-
-						<plugin name="Heavy Armory - Full">
-							<description>
-The full verion of Heavy Armory with a few tweaks:
-
-- Halebards has been renamed to Poleaxes since they are quite short and to ensure compatibility with Animated Armoury's Halebards.
-
-- Keywords added to allow custom animations to be binded to specific weapon types and to allow SkyUI Weapons pack to show its custom icons for the added weapons.
-
-- Changes from Unofficial Skyrim Special Edition added as well as a few other small fixes.
-							</description>
-							<conditionFlags>
-								<flag name="ha">On</flag>
-							</conditionFlags>
-							<files>
-								<folder source="001 Heavy Armory - Full Plugin" destination=""  />
-								<folder source="000 Heavy Armory Meshes" destination="" />
-							</files>
-							<typeDescriptor>
-								<type name="Optional"/>
 							</typeDescriptor>
 						</plugin>
 
@@ -120,8 +99,8 @@ The full verion of Heavy Armory with a few tweaks:
 				<group name="Animations" type="SelectAny">
 					<plugins order="Explicit">
 
-						<plugin name="Animations for Quarterstaffs">
-							<description></description>
+						<plugin name="Animations for Short Staffs">
+							<description>This installs animations for the selected weappons as well as fixed meshes to reduce or remove clipping</description>
 							<files>
 								<folder source="010 Animations for Quarterstaffs" destination=""  />
 							</files>
@@ -142,7 +121,7 @@ The full verion of Heavy Armory with a few tweaks:
 						</plugin>
 
 						<plugin name="Animations for Shortspears">
-							<description></description>
+							<description>This installs animations for the selected weappons as well as fixed meshes to reduce or remove clipping</description>
 							<files>
 								<folder source="011 Animations for Shortspears" destination=""  />
 							</files>
@@ -152,7 +131,7 @@ The full verion of Heavy Armory with a few tweaks:
 						</plugin>
 
 						<plugin name="Animations for Half Pikes and Tridents">
-							<description></description>
+							<description>This installs animations for the selected weappons as well as fixed meshes to reduce or remove clipping</description>
 							<files>
 								<folder source="012 Animations for Spears and Tridents" destination=""  />
 							</files>
@@ -683,7 +662,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<plugins order="Explicit">
 
 						<plugin name="Yes">
-							<description>Selecting yes will install enchanted versions of Heavy Armory, Animated Armoury and Skyrim Spear Mechanic, depending on previous choices of mods.</description>
+							<description>Selecting yes will install enchanted versions of Heavy Armory, Animated Armoury and Skyrim Spear Mechanic, depending on the previous selections of mods.</description>
 							<conditionFlags>
 								<flag name="ench">On</flag>
 							</conditionFlags>
@@ -693,7 +672,7 @@ The full verion of Heavy Armory with a few tweaks:
 						</plugin>
 
 						<plugin name="No">
-							<description>Selecting yes will install enchanted versions of Heavy Armory, Animated Armoury and Skyrim Spear Mechanic, depending on previous choices of mods.</description>
+							<description>Selecting yes will install enchanted versions of Heavy Armory, Animated Armoury and Skyrim Spear Mechanic, depending on the previous selections of mods.</description>
 							<typeDescriptor>
 								<type name="Optional"/>
 							</typeDescriptor>
@@ -882,7 +861,6 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="waccf" value="On"/>
 					<flagDependency flag="ccor" value="Off"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="032 HAFull-WACCF" destination="" />
@@ -893,30 +871,9 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="waccf" value="On"/>
 					<flagDependency flag="ccor" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="033 HAFull-WACCF-CCOR" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="waccf" value="On"/>
-					<flagDependency flag="ccor" value="Off"/>
-					<flagDependency flag="ha-lite" value="On"/>
-				</dependencies>
-				<files>
-					<folder source="034 HALite-WACCF" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="waccf" value="On"/>
-					<flagDependency flag="ccor" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-				</dependencies>
-				<files>
-					<folder source="035 HALite-WACCF-CCOR" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -952,34 +909,6 @@ The full verion of Heavy Armory with a few tweaks:
 				<dependencies operator="And">
 					<flagDependency flag="aa" value="Off"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="ssm" value="Off"/>
-					<flagDependency flag="am" value="On"/>
-					<flagDependency flag="hllr" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="042 ArsMetallica-HALite" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="ssm" value="Off"/>
-					<flagDependency flag="am" value="On"/>
-					<flagDependency flag="hllr" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="044 ArsMetallica-HALite-AA" destination="" />
-				</files>
-			</pattern>
-
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="aa" value="Off"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="am" value="On"/>
 					<flagDependency flag="hllr" value="Off"/>
@@ -992,7 +921,6 @@ The full verion of Heavy Armory with a few tweaks:
 				<dependencies operator="And">
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="am" value="On"/>
 					<flagDependency flag="hllr" value="Off"/>
@@ -1019,34 +947,6 @@ The full verion of Heavy Armory with a few tweaks:
 				<dependencies operator="And">
 					<flagDependency flag="aa" value="Off"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="ssm" value="On"/>
-					<flagDependency flag="am" value="On"/>
-					<flagDependency flag="hllr" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="045 ArsMetallica-HALite-SSM" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="ssm" value="On"/>
-					<flagDependency flag="am" value="On"/>
-					<flagDependency flag="hllr" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="046 ArsMetallica-HALite-AA-SSM" destination="" />
-				</files>
-			</pattern>
-
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="aa" value="Off"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="am" value="On"/>
 					<flagDependency flag="hllr" value="Off"/>
@@ -1059,7 +959,6 @@ The full verion of Heavy Armory with a few tweaks:
 				<dependencies operator="And">
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="am" value="On"/>
 					<flagDependency flag="hllr" value="Off"/>
@@ -1099,7 +998,6 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="Off"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="am" value="Off"/>
 					<flagDependency flag="ccor" value="Off"/>
@@ -1114,7 +1012,6 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="am" value="Off"/>
 					<flagDependency flag="ccor" value="Off"/>
@@ -1129,7 +1026,6 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="am" value="Off"/>
 					<flagDependency flag="ccor" value="Off"/>
@@ -1144,7 +1040,6 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="aa" value="Off"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="am" value="Off"/>
 					<flagDependency flag="ccor" value="Off"/>
@@ -1153,52 +1048,7 @@ The full verion of Heavy Armory with a few tweaks:
 				<files>
 					<folder source="072 HAFull-SSM-Blacksmith Lvl list patch" destination="" />
 				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="ssm" value="Off"/>
-					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="Off"/>
-					<flagDependency flag="hllr" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="073 HALite-AA-Blacksmith Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="ssm" value="On"/>
-					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="Off"/>
-					<flagDependency flag="hllr" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="074 HALite-AA-SPM-Blacksimth Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="aa" value="Off"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="ssm" value="On"/>
-					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="Off"/>
-					<flagDependency flag="hllr" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="075 HALite-SSM-Blacksmith Lvl list patch" destination="" />
-				</files>
-			</pattern>
+			</pattern>			
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="aa" value="On"/>
@@ -1220,7 +1070,6 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="Off"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="am" value="Off"/>
 					<flagDependency flag="ccor" value="On"/>
@@ -1234,7 +1083,6 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="am" value="Off"/>
 					<flagDependency flag="ccor" value="On"/>
@@ -1248,7 +1096,6 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="am" value="Off"/>
 					<flagDependency flag="ccor" value="On"/>
@@ -1262,7 +1109,6 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="aa" value="Off"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="am" value="Off"/>
 					<flagDependency flag="ccor" value="On"/>
@@ -1271,51 +1117,7 @@ The full verion of Heavy Armory with a few tweaks:
 					<folder source="082 HAFull-SSM-Blacksmith-CCOR Lvl list patch" destination="" />
 				</files>
 			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="ssm" value="Off"/>
-					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="On"/>
-				</dependencies>
-				<files>
-					<folder source="083  HALite-AA-Blacksmith-CCOR Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="ssm" value="On"/>
-					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="On"/>
-				</dependencies>
-				<files>
-					<folder source="084 HALite-AA-SPM-Blacksmith-CCOR Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="aa" value="Off"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="ssm" value="On"/>
-					<flagDependency flag="am" value="Off"/>
-					<flagDependency flag="ccor" value="On"/>
-				</dependencies>
-				<files>
-					<folder source="085 HALite-SSM-Blacksmith-CCOR Lvl list patch" destination="" />
-				</files>
-			</pattern>
-
 			<!-- Level list patches -->
-
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
@@ -1330,101 +1132,7 @@ The full verion of Heavy Armory with a few tweaks:
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ssm" value="Off"/>
-					<flagDependency flag="waccf" value="Off"/>
-					<flagDependency flag="ccor" value="Off"/>
-					<flagDependency flag="hllr" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="110 HALite-AA Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ssm" value="Off"/>
-					<flagDependency flag="waccf" value="On"/>
-					<flagDependency flag="ccor" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="111 HALite-AA-WACCF Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ssm" value="Off"/>
-					<flagDependency flag="waccf" value="On"/>
-					<flagDependency flag="ccor" value="On"/>
-				</dependencies>
-				<files>
-					<folder source="112 HALite-AA-WACCF-CCOR Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ssm" value="On"/>
-					<flagDependency flag="waccf" value="Off"/>
-					<flagDependency flag="ccor" value="Off"/>
-					<flagDependency flag="hllr" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="113 HALite-AA-SSM Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ssm" value="On"/>
-					<flagDependency flag="waccf" value="On"/>
-					<flagDependency flag="ccor" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="114 HALite-AA-SSM-WACCF Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ssm" value="On"/>
-					<flagDependency flag="waccf" value="On"/>
-					<flagDependency flag="ccor" value="On"/>
-				</dependencies>
-				<files>
-					<folder source="115 HALite-AA-SSM-WACCF-CCOR Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="aa" value="Off"/>
-					<flagDependency flag="ssm" value="On"/>
-					<flagDependency flag="hllr" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="116 HALite-SSM Lvl list patch" destination="" />
-				</files>
-			</pattern>
-
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="waccf" value="Off"/>
@@ -1439,7 +1147,6 @@ The full verion of Heavy Armory with a few tweaks:
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="waccf" value="On"/>
@@ -1453,7 +1160,6 @@ The full verion of Heavy Armory with a few tweaks:
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="waccf" value="On"/>
@@ -1467,7 +1173,6 @@ The full verion of Heavy Armory with a few tweaks:
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="waccf" value="Off"/>
@@ -1482,7 +1187,6 @@ The full verion of Heavy Armory with a few tweaks:
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="waccf" value="On"/>
@@ -1496,7 +1200,6 @@ The full verion of Heavy Armory with a few tweaks:
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="waccf" value="On"/>
@@ -1510,7 +1213,6 @@ The full verion of Heavy Armory with a few tweaks:
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="aa" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="hllr" value="Off"/>
@@ -1537,7 +1239,6 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="da" value="On"/>
 					<flagDependency flag="ha" value="Off"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 				</dependencies>
 				<files>
@@ -1549,7 +1250,6 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="da" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="aa" value="Off"/>
 				</dependencies>
 				<files>
@@ -1559,21 +1259,8 @@ The full verion of Heavy Armory with a few tweaks:
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="da" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="aa" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="203 DawnguardArsenal-HALite-DawnguardWeapons Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="da" value="Off"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 				</dependencies>
 				<files>
@@ -1583,37 +1270,12 @@ The full verion of Heavy Armory with a few tweaks:
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="da" value="Off"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="aa" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="205 HALite-AA-DawnguardWeapons_lvllist-patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="da" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 				</dependencies>
 				<files>
 					<folder source="206 DawnguardArsenal-HAFull-AA-DawnguardWeapons_lvllist-patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="da" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-				</dependencies>
-				<files>
-					<folder source="207 DawnguardArsenal-HALite-AA-DawnguardWeapons_lvllist-patch" destination="" />
 				</files>
 			</pattern>
 
@@ -1633,19 +1295,6 @@ The full verion of Heavy Armory with a few tweaks:
 				<dependencies operator="And">
 					<flagDependency flag="ench" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="hllr" value="Off"/>
-					<flagDependency flag="waccf" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="401 HALite-Enchanted" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="ench" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="hllr" value="Off"/>
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
@@ -1680,19 +1329,6 @@ The full verion of Heavy Armory with a few tweaks:
 				<dependencies operator="And">
 					<flagDependency flag="ench" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="hllr" value="On"/>
-					<flagDependency flag="waccf" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="411 HALite-EnchantedHLLR" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="ench" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="hllr" value="On"/>
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
@@ -1727,18 +1363,6 @@ The full verion of Heavy Armory with a few tweaks:
 				<dependencies operator="And">
 					<flagDependency flag="ench" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="hllr" value="Off"/>
-					<flagDependency flag="waccf" value="On"/>
-				</dependencies>
-				<files>
-					<folder source="421 HALite-EnchantedWACCF" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="ench" value="On"/>
-					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="hllr" value="Off"/>
 					<flagDependency flag="waccf" value="On"/>
@@ -1766,43 +1390,12 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ench" value="On"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="hllr" value="Off"/>
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="450 AA-HAFull-Ench Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="ench" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="ssm" value="Off"/>
-					<flagDependency flag="hllr" value="Off"/>
-					<flagDependency flag="waccf" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="451 AA-HALite-Ench Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="ench" value="On"/>
-					<flagDependency flag="aa" value="Off"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="ssm" value="On"/>
-					<flagDependency flag="hllr" value="Off"/>
-					<flagDependency flag="waccf" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="452 HALite-SSM-Ench Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1826,7 +1419,6 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ench" value="On"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="Off"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="hllr" value="Off"/>
 					<flagDependency flag="waccf" value="Off"/>
@@ -1841,22 +1433,6 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ench" value="On"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="ssm" value="On"/>
-					<flagDependency flag="hllr" value="Off"/>
-					<flagDependency flag="waccf" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="455 AA-HALite-SSM-Ench Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="ench" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="hllr" value="Off"/>
 					<flagDependency flag="waccf" value="Off"/>
@@ -1872,43 +1448,12 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ench" value="On"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="hllr" value="On"/>
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="460 AA-HAFull-EnchHLLR Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="ench" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="ssm" value="Off"/>
-					<flagDependency flag="hllr" value="On"/>
-					<flagDependency flag="waccf" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="461 AA-HALite-EnchHLLR Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="ench" value="On"/>
-					<flagDependency flag="aa" value="Off"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="ssm" value="On"/>
-					<flagDependency flag="hllr" value="On"/>
-					<flagDependency flag="waccf" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="462 HALite-SSM-EnchHLLR Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -1947,22 +1492,6 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ench" value="On"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="ssm" value="On"/>
-					<flagDependency flag="hllr" value="On"/>
-					<flagDependency flag="waccf" value="Off"/>
-				</dependencies>
-				<files>
-					<folder source="465 AA-HALite-SSM-EnchHLLR Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="ench" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="hllr" value="On"/>
 					<flagDependency flag="waccf" value="Off"/>
@@ -1978,43 +1507,12 @@ The full verion of Heavy Armory with a few tweaks:
 					<flagDependency flag="ench" value="On"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="hllr" value="Off"/>
 					<flagDependency flag="waccf" value="On"/>
 				</dependencies>
 				<files>
 					<folder source="470 AA-HAFull-EnchWACCF Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="ench" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="ssm" value="Off"/>
-					<flagDependency flag="hllr" value="Off"/>
-					<flagDependency flag="waccf" value="On"/>
-				</dependencies>
-				<files>
-					<folder source="471 AA-HALite-EnchWACCF Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="ench" value="On"/>
-					<flagDependency flag="aa" value="Off"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="ssm" value="On"/>
-					<flagDependency flag="hllr" value="Off"/>
-					<flagDependency flag="waccf" value="On"/>
-				</dependencies>
-				<files>
-					<folder source="472 HALite-SSM-EnchWACCF Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
@@ -2045,21 +1543,6 @@ The full verion of Heavy Armory with a few tweaks:
 				</dependencies>
 				<files>
 					<folder source="474 AA-SSM-EnchWACCF Lvl list patch" destination="" />
-				</files>
-			</pattern>
-			<pattern>
-				<dependencies operator="And">
-					<flagDependency flag="lvl" value="On"/>
-					<flagDependency flag="ench" value="On"/>
-					<flagDependency flag="aa" value="On"/>
-					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="On"/>
-					<flagDependency flag="ssm" value="On"/>
-					<flagDependency flag="hllr" value="Off"/>
-					<flagDependency flag="waccf" value="On"/>
-				</dependencies>
-				<files>
-					<folder source="475 AA-HALite-SSM-EnchWACCF Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
