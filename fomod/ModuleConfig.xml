@@ -480,32 +480,17 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 
 		<!-- Balance tweaks -->
 		<installStep name="Tweaks">
-			<visible>
-				<dependencies operator="And">
-					<flagDependency flag="waccf" value="Off"/>
-				</dependencies>
-			</visible>
 			<optionalFileGroups order="Explicit">
 				<group name="Balance Tweaks" type="SelectExactlyOne">
 					<plugins order="Explicit">
 
 						<plugin name="Install balance tweaks">
-							<description>This will install balancing tweaks for Heavy Armory, Skyrim Spear Mechanic and/or Animated Armoury. Note that these balancing tweaks are not compatible with Weapons Armors Clothing Clutter Fixes. Selecting this will hide WACCF options in the installer.</description>
+							<description>This will install balancing tweaks for Heavy Armory, Skyrim Spear Mechanic and/or Animated Armoury.</description>
 							<conditionFlags>
 								<flag name="balance">On</flag>
 							</conditionFlags>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Recommended"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="Weapons Armor Clothing &amp; Clutter Fixes.esp" state="Active"/>
-											</dependencies>
-											<type name="Optional"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
+								<type name="Recommended"/>
 							</typeDescriptor>
 						</plugin>
 
@@ -515,44 +500,9 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 								<flag name="balance">Off</flag>
 							</conditionFlags>
 							<typeDescriptor>
-								<dependencyType>
-									<defaultType name="Optional"/>
-									<patterns>
-										<pattern>
-											<dependencies operator="And">
-												<fileDependency file="Weapons Armor Clothing &amp; Clutter Fixes.esp" state="Active"/>
-											</dependencies>
-											<type name="Recommended"/>
-										</pattern>
-									</patterns>
-								</dependencyType>
+								<type name="Optional"/>
 							</typeDescriptor>
 						</plugin>
-
-					</plugins>
-				</group>
-			</optionalFileGroups>
-		</installStep>
-		<installStep name="Tweaks">
-			<visible>
-				<dependencies operator="And">
-					<flagDependency flag="waccf" value="On"/>
-				</dependencies>
-			</visible>
-			<optionalFileGroups order="Explicit">
-				<group name="Balance Tweaks" type="SelectExactlyOne">
-					<plugins order="Explicit">
-
-						<plugin name="Do not install balance tweaks">
-							<description>The balancing tweaks are not compatible with Weapons Armors Clothing and Clutter Fixes.</description>
-							<conditionFlags>
-								<flag name="balance">Off</flag>
-							</conditionFlags>
-							<typeDescriptor>
-								<type name="Recommended"/>
-							</typeDescriptor>
-						</plugin>
-
 					</plugins>
 				</group>
 			</optionalFileGroups>
@@ -772,6 +722,8 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 				<dependencies operator="And">
 					<flagDependency flag="balance" value="On"/>
 					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+					<flagDependency flag="ccor" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="021 Balance tweaks for Heavy Armory" destination="" />
@@ -781,6 +733,8 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 				<dependencies operator="And">
 					<flagDependency flag="balance" value="On"/>
 					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+					<flagDependency flag="ccor" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="020 Balance tweaks for Animated Armoury" destination="" />
@@ -790,9 +744,66 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 				<dependencies operator="And">
 					<flagDependency flag="balance" value="On"/>
 					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+					<flagDependency flag="ccor" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="022 Balance tweaks for Skyrim Spear Mechanic" destination="" />
+				</files>
+			</pattern>
+
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="balance" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="25 Balance tweaks for Heavy Armory - WACCF version" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="balance" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="23 Balance tweaks for Animated Armoury - WACCF version" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="balance" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="27 Balance tweaks for Skyrim Spear Mechanic - WACCF or CCORversion" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="balance" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="26 Balance tweaks for Heavy Armory - CCOR version" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="balance" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="ccor" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="24 Balance tweaks for Animated Armoury - CCOR version" destination="" />
 				</files>
 			</pattern>
 
