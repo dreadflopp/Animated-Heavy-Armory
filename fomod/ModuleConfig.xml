@@ -111,7 +111,6 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 										<pattern>
 											<dependencies operator="And">
 												<flagDependency flag="ha" value="On"/>
-												<flagDependency flag="ha-lite" value="Off"/>
 											</dependencies>
 											<type name="Recommended"/>
 										</pattern>
@@ -1064,7 +1063,6 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 				<dependencies operator="And">
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="Off"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="Off"/>
 					<flagDependency flag="am" value="Off"/>
 					<flagDependency flag="ccor" value="Off"/>
@@ -1374,7 +1372,6 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 				<dependencies operator="And">
 					<flagDependency flag="ench" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="hllr" value="Off"/>
 					<flagDependency flag="waccf" value="On"/>
 				</dependencies>
@@ -1415,7 +1412,6 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="ench" value="On"/>
 					<flagDependency flag="aa" value="Off"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="hllr" value="Off"/>
 					<flagDependency flag="waccf" value="Off"/>
@@ -1473,7 +1469,6 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="ench" value="On"/>
 					<flagDependency flag="aa" value="Off"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="hllr" value="On"/>
 					<flagDependency flag="waccf" value="Off"/>
@@ -1488,7 +1483,6 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="ench" value="On"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="Off"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="hllr" value="On"/>
 					<flagDependency flag="waccf" value="Off"/>
@@ -1532,7 +1526,6 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="ench" value="On"/>
 					<flagDependency flag="aa" value="Off"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="hllr" value="Off"/>
 					<flagDependency flag="waccf" value="On"/>
@@ -1547,7 +1540,6 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="ench" value="On"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="Off"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="hllr" value="Off"/>
 					<flagDependency flag="waccf" value="On"/>
@@ -1562,7 +1554,6 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="ench" value="On"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
-					<flagDependency flag="ha-lite" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="hllr" value="Off"/>
 					<flagDependency flag="waccf" value="On"/>
