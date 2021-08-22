@@ -32,6 +32,7 @@ This installer will guide you through the installation of:
 								<flag name="adamant">Off</flag>
 								<flag name="lvl">Off</flag>
 								<flag name="ench">Off</flag>
+								<flag name="summermyst">Off</flag>
 
 							</conditionFlags>
 							<typeDescriptor>
@@ -610,8 +611,8 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 				<group name="Do you want to install enchanted versions?" type="SelectExactlyOne">
 					<plugins order="Explicit">
 
-						<plugin name="Yes">
-							<description>Selecting yes will install enchanted versions of Heavy Armory, Animated Armoury and Skyrim Spear Mechanic, depending on the previous selections of mods.</description>
+						<plugin name="Add enchanted versions using vanilla anchantments">
+							<description>This will install enchanted versions of Heavy Armory, Animated Armoury and Skyrim Spear Mechanic, depending on the previous selections of mods.</description>
 							<conditionFlags>
 								<flag name="ench">On</flag>
 							</conditionFlags>
@@ -620,8 +621,19 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 							</typeDescriptor>
 						</plugin>
 
+						<plugin name="Add enchanted versions using vanilla and Summermyst anchantments">
+							<description>This will install enchanted versions of Heavy Armory, Animated Armoury and Skyrim Spear Mechanic, depending on the previous selections of mods. This uses both vanilla and Summermyst enchantments and requires Summermyst to be installed.</description>
+							<conditionFlags>
+								<flag name="ench">On</flag>
+								<flag name="summermyst">On</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+
 						<plugin name="No">
-							<description>Selecting yes will install enchanted versions of Heavy Armory, Animated Armoury and Skyrim Spear Mechanic, depending on the previous selections of mods.</description>
+							<description>Do not install enchanted versions of the weapons.</description>
 							<typeDescriptor>
 								<type name="Optional"/>
 							</typeDescriptor>
@@ -1292,6 +1304,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="hllr" value="Off"/>
 					<flagDependency flag="waccf" value="Off"/>
@@ -1303,29 +1316,32 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="hllr" value="Off"/>
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="402 HA-Enchanted" destination="" />
+					<folder source="401 HA-Enchanted" destination="" />
 				</files>
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="hllr" value="Off"/>
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="403 SSM-Enchanted" destination="" />
+					<folder source="402 SSM-Enchanted" destination="" />
 				</files>
 			</pattern>
 
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="hllr" value="On"/>
 					<flagDependency flag="waccf" value="Off"/>
@@ -1337,29 +1353,32 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="hllr" value="On"/>
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="412 HA-EnchantedHLLR" destination="" />
+					<folder source="411 HA-EnchantedHLLR" destination="" />
 				</files>
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="hllr" value="On"/>
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="413 SSM-EnchantedHLLR" destination="" />
+					<folder source="412 SSM-EnchantedHLLR" destination="" />
 				</files>
 			</pattern>
 
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="hllr" value="Off"/>
 					<flagDependency flag="waccf" value="On"/>
@@ -1371,23 +1390,137 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="hllr" value="Off"/>
 					<flagDependency flag="waccf" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="422 HA-EnchantedWACCF" destination="" />
+					<folder source="421 HA-EnchantedWACCF" destination="" />
 				</files>
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="hllr" value="Off"/>
 					<flagDependency flag="waccf" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="423 SSM-EnchantedWACCF" destination="" />
+					<folder source="422 SSM-EnchantedWACCF" destination="" />
+				</files>
+			</pattern>
+
+			<!-- Enchanted Summermyst-->
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="430 AA-SummermystEnch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="431 HA-SummermystEnch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="432 SSM-SummermystEnch" destination="" />
+				</files>
+			</pattern>
+
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="hllr" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="440 AA-SummermystEnchHLLR" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="hllr" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="441 HA-SummermystEnchHLLR" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="442 SSM-SummermystEnchHLLR" destination="" />
+				</files>
+			</pattern>
+
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="450 AA-SummermystEnchWACCF" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="451 HA-SummermystEnchWACCF" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="452 SSM-SummermystEnchWACCF" destination="" />
 				</files>
 			</pattern>
 
@@ -1396,6 +1529,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ssm" value="Off"/>
@@ -1403,13 +1537,14 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="450 AA-HA-Ench Lvl list patch" destination="" />
+					<folder source="500 AA-HA-Ench Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="aa" value="Off"/>
 					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ssm" value="On"/>
@@ -1417,13 +1552,14 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="453 HA-SSM-Ench Lvl list patch" destination="" />
+					<folder source="501 HA-SSM-Ench Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
@@ -1431,13 +1567,14 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="454 AA-SSM-Ench Lvl list patch" destination="" />
+					<folder source="502 AA-SSM-Ench Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ssm" value="On"/>
@@ -1445,7 +1582,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="456 AA-HA-SSM-Ench Lvl list patch" destination="" />
+					<folder source="503 AA-HA-SSM-Ench Lvl list patch" destination="" />
 				</files>
 			</pattern>
 
@@ -1453,6 +1590,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ssm" value="Off"/>
@@ -1460,13 +1598,14 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="460 AA-HA-EnchHLLR Lvl list patch" destination="" />
+					<folder source="510 AA-HA-EnchHLLR Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="aa" value="Off"/>
 					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ssm" value="On"/>
@@ -1474,13 +1613,14 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="463 HA-SSM-EnchHLLR Lvl list patch" destination="" />
+					<folder source="511 HA-SSM-EnchHLLR Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
@@ -1488,13 +1628,14 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="464 AA-SSM-EnchHLLR Lvl list patch" destination="" />
+					<folder source="512 AA-SSM-EnchHLLR Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ssm" value="On"/>
@@ -1502,7 +1643,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="Off"/>
 				</dependencies>
 				<files>
-					<folder source="466 AA-HA-SSM-EnchHLLR Lvl list patch" destination="" />
+					<folder source="513 AA-HA-SSM-EnchHLLR Lvl list patch" destination="" />
 				</files>
 			</pattern>
 
@@ -1510,6 +1651,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ssm" value="Off"/>
@@ -1517,13 +1659,14 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="470 AA-HA-EnchWACCF Lvl list patch" destination="" />
+					<folder source="520 AA-HA-EnchWACCF Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="aa" value="Off"/>
 					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ssm" value="On"/>
@@ -1531,13 +1674,14 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="473 HA-SSM-EnchWACCF Lvl list patch" destination="" />
+					<folder source="521 HA-SSM-EnchWACCF Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="Off"/>
 					<flagDependency flag="ssm" value="On"/>
@@ -1545,13 +1689,14 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="474 AA-SSM-EnchWACCF Lvl list patch" destination="" />
+					<folder source="522 AA-SSM-EnchWACCF Lvl list patch" destination="" />
 				</files>
 			</pattern>
 			<pattern>
 				<dependencies operator="And">
 					<flagDependency flag="lvl" value="On"/>
 					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="Off"/>
 					<flagDependency flag="aa" value="On"/>
 					<flagDependency flag="ha" value="On"/>
 					<flagDependency flag="ssm" value="On"/>
@@ -1559,9 +1704,194 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 					<flagDependency flag="waccf" value="On"/>
 				</dependencies>
 				<files>
-					<folder source="476 AA-HA-SSM-EnchWACCF Lvl list patch" destination="" />
+					<folder source="523 AA-HA-SSM-EnchWACCF Lvl list patch" destination="" />
 				</files>
 			</pattern>
+
+			<!-- Summermyst Enchanted lvl list -->
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ssm" value="Off"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="530 AA-HA-SumEnch Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="531 HA-SSM-SumEnch Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="532 AA-SSM-SumEnch Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="533 AA-HA-SSM-SumEnch Lvl list patch" destination="" />
+				</files>
+			</pattern>
+
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ssm" value="Off"/>
+					<flagDependency flag="hllr" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="540 AA-HA-SumEnchHLLR Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="541 HA-SSM-SumEnchHLLR Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="542 AA-SSM-SumEnchHLLR Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="On"/>
+					<flagDependency flag="waccf" value="Off"/>
+				</dependencies>
+				<files>
+					<folder source="543 AA-HA-SSM-SumEnchHLLR Lvl list patch" destination="" />
+				</files>
+			</pattern>
+
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ssm" value="Off"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="550 AA-HA-SumEnchWACCF Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="aa" value="Off"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="551 HA-SSM-SumEnchWACCF Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="Off"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="552 AA-SSM-SumEnchWACCF Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="lvl" value="On"/>
+					<flagDependency flag="ench" value="On"/>
+					<flagDependency flag="summermyst" value="On"/>
+					<flagDependency flag="aa" value="On"/>
+					<flagDependency flag="ha" value="On"/>
+					<flagDependency flag="ssm" value="On"/>
+					<flagDependency flag="hllr" value="Off"/>
+					<flagDependency flag="waccf" value="On"/>
+				</dependencies>
+				<files>
+					<folder source="553 AA-HA-SSM-SumEnchWACCF Lvl list patch" destination="" />
+				</files>
+			</pattern>
+			
 		</patterns>
 	</conditionalFileInstalls>
 </config>
