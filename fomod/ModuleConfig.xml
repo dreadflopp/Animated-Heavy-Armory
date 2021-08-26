@@ -902,6 +902,7 @@ This is installs Heavy Armory with a few tweaks and bugfixes:
 				<dependencies operator="And">
 					<flagDependency flag="ssm" value="On"/>
 					<flagDependency flag="waccf" value="On"/>
+					<flagDependency flag="balance" value="Off"/>
 				</dependencies>
 				<files>
 					<folder source="035 SSM-WACCF" destination="" />
